@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #Joints Accessible
 
 This is based on JointsWP (which itself uses Foundation), a project by [@jeremyenglert](https://twitter.com/jeremyenglert). [Follow Jeremy](https://twitter.com/jeremyenglert) on Twitter to keep up-to-date with JointsWP.
@@ -31,3 +32,6 @@ From the command line, navigate to your main theme directory. Then run:
 `bower update`
 
 =======
+=======
+# cgh2015
+>>>>>>> cgh2015/master
