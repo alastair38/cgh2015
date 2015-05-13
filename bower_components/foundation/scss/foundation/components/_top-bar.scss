@@ -15,7 +15,7 @@ $include-html-top-bar-classes: $include-html-classes !default;
 // Background color for the top bar
 $topbar-bg-color: none !default; //formally $oil
 $topbar-bg: none !default; //formally $topbar-bg-color
-$topmenu-bg: $oil !default;
+$topmenu-bg: $white !default;
 
 // Height and margin
 $topbar-height: rem-calc(45) !default;
@@ -26,10 +26,10 @@ $topbar-title-weight: $font-weight-normal !default;
 $topbar-title-font-size: rem-calc(17) !default;
 
 // Set the link colors and styles for top-level nav
-$topbar-link-color: $white !default;
-$topbar-link-color-hover: $white !default;
-$topbar-link-color-active: $white !default;
-$topbar-link-color-active-hover: $white !default;
+$topbar-link-color: $oil !default;
+$topbar-link-color-hover: $oil !default;
+$topbar-link-color-active: $steel !default;
+$topbar-link-color-active-hover: $oil !default;
 $topbar-link-weight: $font-weight-normal !default;
 $topbar-link-font-size: rem-calc(15) !default;
 $topbar-link-hover-lightness: -10% !default; // Darken by 10%
@@ -120,6 +120,7 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
     .contain-to-grid {
       width: 100%;
       background: $topmenu-bg;
+      box-shadow:0 .05rem 1rem rgba(0,0,0,.15);
 
       .top-bar { margin-bottom: $topbar-margin-bottom; }
     }
@@ -327,7 +328,7 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
           text-transform: $topbar-link-text-transform;
 
          &:focus{
-            background: scale-color($primary-color, $lightness: -14%);
+            background: scale-color($ghost, $lightness: -14%);
             color: $topbar-link-color-active-hover;
           }
 
@@ -357,21 +358,21 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
 
         // Apply the hover link color when it has that class
         &:hover:not(.has-form) > a {
-          background: scale-color($primary-color, $lightness: -14%);
+          background: scale-color($white, $lightness: -14%);
           color: $topbar-link-color-hover;
         }
 
         // Apply the active link color when it has that class
         &.active > a {
-          background: $primary-color;
+          background: $white;
           color: $topbar-link-color-active;
           text-decoration: underline;
           &:hover{
-            background: scale-color($primary-color, $lightness: -14%);
+            background: scale-color($white, $lightness: -14%);
             color: $topbar-link-color-active-hover;
           }
           &:focus{
-            background: scale-color($primary-color, $lightness: -14%);
+            background: scale-color($white, $lightness: -14%);
             color: $topbar-link-color-active-hover;
           }
         }
@@ -503,7 +504,7 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
           display: inline;
 
           li {
-            float: $default-float;
+            float: right;
             .js-generated { display: none; }
           }
         }

@@ -1,8 +1,11 @@
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+<?php the_post_thumbnail('full'); ?>
 	
 	<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article" itemscope itemtype="http://schema.org/WebPage">
 							
 		<header class="article-header">
+
 			<h1 class="page-title"><?php the_title(); ?></h1>
 		</header> <!-- end article header -->
 						
@@ -19,4 +22,4 @@
 						
 	</article> <!-- end article -->
 	
-<?php endwhile; endif; ?>							
+<?php endwhile; endif; ?>

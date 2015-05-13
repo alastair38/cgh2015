@@ -52,6 +52,8 @@
 								  
 							 <?php get_template_part( 'partials/nav', 'main-offcanvas' ); ?>
 
+                            <!--
+
                             <button id="accessible">&#63;</button>
 
                             <div id="modal" aria-hidden="true" aria-labelledby="modalTitle" aria-describedby="modalDescription" role="dialog">
@@ -67,7 +69,10 @@
                             </div>
                             <div id="modalOverlay" tabindex="-1"></div>
 
-                            <button href="#" class="scrollToTop">Back To Top</button>
+                            -->
+
+                            <button href="#" class="scrollToTop"></button>
+                            <span id="scrollAlert">Back to Top</span>
 
 						</div> <!-- end #inner-header -->
 

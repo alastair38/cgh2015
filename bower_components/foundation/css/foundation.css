@@ -4430,7 +4430,8 @@ meta.foundation-mq-topbar {
 /* Wrapped around .top-bar to contain to grid width */
 .contain-to-grid {
   width: 100%;
-  background: #333333; }
+  background: #FFFFFF;
+  box-shadow: 0 0.05rem 1rem rgba(0, 0, 0, 0.15); }
   .contain-to-grid .top-bar {
     margin-bottom: 0; }
 
@@ -4494,7 +4495,7 @@ meta.foundation-mq-topbar {
       margin: 0; }
       .top-bar .name h1 a, .top-bar .name h2 a, .top-bar .name h3 a, .top-bar .name h4 a, .top-bar .name p a, .top-bar .name span a {
         font-weight: normal;
-        color: #FFFFFF;
+        color: #333333;
         width: 75%;
         display: block;
         padding: 0 0.9375rem; }
@@ -4503,7 +4504,7 @@ meta.foundation-mq-topbar {
     right: 0;
     top: 0; }
     .top-bar .toggle-topbar a {
-      color: #FFFFFF;
+      color: #333333;
       text-transform: uppercase;
       font-size: 0.8125rem;
       font-weight: bold;
@@ -4566,7 +4567,7 @@ meta.foundation-mq-topbar {
     .top-bar-section ul li > a {
       display: block;
       width: 100%;
-      color: #FFFFFF;
+      color: #333333;
       padding: 12px 0 12px 0;
       padding-left: 0.9375rem;
       font-family: "Lato", Helvetica, Roboto, Arial, sans-serif;
@@ -4574,8 +4575,8 @@ meta.foundation-mq-topbar {
       font-weight: normal;
       text-transform: none; }
       .top-bar-section ul li > a:focus {
-        background: #00536e;
-        color: #FFFFFF; }
+        background: #d7d7d7;
+        color: #333333; }
       .top-bar-section ul li > a.button {
         font-size: 0.9375rem;
         padding-right: 0.9375rem;
@@ -4663,18 +4664,18 @@ meta.foundation-mq-topbar {
         .top-bar-section ul li > button.warning:hover, .top-bar-section ul li > button.warning:focus {
           color: #FFFFFF; }
     .top-bar-section ul li:hover:not(.has-form) > a {
-      background: #00536e;
-      color: #FFFFFF; }
+      background: #dbdbdb;
+      color: #333333; }
     .top-bar-section ul li.active > a {
-      background: #006080;
-      color: #FFFFFF;
+      background: #FFFFFF;
+      color: #666666;
       text-decoration: underline; }
       .top-bar-section ul li.active > a:hover {
-        background: #00536e;
-        color: #FFFFFF; }
+        background: #dbdbdb;
+        color: #333333; }
       .top-bar-section ul li.active > a:focus {
-        background: #00536e;
-        color: #FFFFFF; }
+        background: #dbdbdb;
+        color: #333333; }
   .top-bar-section .has-form {
     padding: 0.9375rem; }
   .top-bar-section .has-dropdown {
@@ -4730,7 +4731,7 @@ meta.foundation-mq-topbar {
         margin-top: 0;
         font-size: 1.125rem; }
         .top-bar-section .dropdown li.title h5 a, .top-bar-section .dropdown li.parent-link a {
-          color: #FFFFFF;
+          color: #333333;
           display: block; }
           .top-bar-section .dropdown li.title h5 a:hover, .top-bar-section .dropdown li.parent-link a:hover {
             background: none; }
@@ -4791,21 +4792,21 @@ meta.foundation-mq-topbar {
       height: auto !important;
       display: inline; }
       .top-bar-section ul li {
-        float: left; }
+        float: right; }
         .top-bar-section ul li .js-generated {
           display: none; }
     .top-bar-section li.hover > a:not(.button) {
-      color: #FFFFFF; }
+      color: #333333; }
     .top-bar-section li:not(.has-form) a:not(.button) {
       padding: 0 0.9375rem;
       line-height: 2.8125rem; }
     .top-bar-section li.active:not(.has-form) a:not(.button) {
       padding: 0 0.9375rem;
       line-height: 2.8125rem;
-      color: #FFFFFF;
+      color: #666666;
       text-decoration: underline; }
       .top-bar-section li.active:not(.has-form) a:not(.button):hover {
-        color: #FFFFFF; }
+        color: #333333; }
     .top-bar-section .has-dropdown > a {
       padding-right: 2.1875rem !important; }
       .top-bar-section .has-dropdown > a:after {
@@ -4893,11 +4894,11 @@ meta.foundation-mq-topbar {
   .no-js .top-bar-section ul li:hover > a {
     background-color: none;
     background: none;
-    color: #FFFFFF; }
+    color: #333333; }
   .no-js .top-bar-section ul li:active > a {
     background: none;
     text-decoration: underline;
-    color: #FFFFFF; }
+    color: #666666; }
   .no-js .top-bar-section .has-dropdown:hover > .dropdown {
     display: block;
     position: static !important;
