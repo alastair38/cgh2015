@@ -21,6 +21,34 @@ LAYOUT & GRID STYLES
 	max-width: 1140px;
 }
 
+#latestPosts {
+    padding: 1em 3em;
+    & h3 {
+        color: $charcoal;
+        text-align: center;
+        margin: 0em 0em 1em 0em;
+        font-weight: 400;
+        text-transform: uppercase;
+
+    }
+}
+
+#latestContainer,
+#featuredPage {
+    height: 200px;
+    & h4 {
+        width: 35%;
+        height: 100%;
+        float: left;
+    }
+    & p {
+        width: 65%;
+        height: 100%;
+        float: left;
+
+    }
+}
+
 /*********************
 HEADER STYLES
 *********************/

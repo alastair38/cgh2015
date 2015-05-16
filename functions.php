@@ -138,6 +138,14 @@ function joints_register_sidebars() {
 	*/
 } // don't remove this bracket!
 
+
+/*********************
+RE-ENABLE WP LINK MANAGER
+*********************/
+
+add_filter( 'pre_option_link_manager_enabled', '__return_true' );
+
+
 /*********************
 COMMENT LAYOUT
 *********************/

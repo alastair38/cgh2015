@@ -5015,7 +5015,7 @@ meta.foundation-mq-topbar {
       font-weight: normal;
       text-transform: none; }
       .top-bar-section ul li > a:focus {
-        background: #d7d7d7;
+        background: #FAFAFA;
         color: #333333; }
       .top-bar-section ul li > a.button {
         font-size: 0.9375rem;
@@ -5104,17 +5104,17 @@ meta.foundation-mq-topbar {
         .top-bar-section ul li > button.warning:hover, .top-bar-section ul li > button.warning:focus {
           color: #FFFFFF; }
     .top-bar-section ul li:hover:not(.has-form) > a {
-      background: #dbdbdb;
+      background: #FAFAFA;
       color: #333333; }
     .top-bar-section ul li.active > a {
-      background: #FFFFFF;
+      background: #FAFAFA;
       color: #666666;
       text-decoration: underline; }
       .top-bar-section ul li.active > a:hover {
-        background: #dbdbdb;
+        background: #FAFAFA;
         color: #333333; }
       .top-bar-section ul li.active > a:focus {
-        background: #dbdbdb;
+        background: #FAFAFA;
         color: #333333; }
   .top-bar-section .has-form {
     padding: 0.9375rem; }
@@ -5228,11 +5228,12 @@ meta.foundation-mq-topbar {
     transition: none 0 0;
     left: 0 !important; }
     .top-bar-section ul {
+      float: right;
       width: auto;
       height: auto !important;
       display: inline; }
       .top-bar-section ul li {
-        float: right; }
+        float: left; }
         .top-bar-section ul li .js-generated {
           display: none; }
     .top-bar-section li.hover > a:not(.button) {
@@ -6922,8 +6923,8 @@ LAYOUT & GRID STYLES
 Scroll to top button
 *********************/
 .scrollToTop {
-  height: 30px;
-  width: 30px;
+  height: 1em;
+  width: 1em;
   padding: 0em;
   margin: 0;
   border-left: 1px solid;
@@ -6932,8 +6933,8 @@ Scroll to top button
   color: #444;
   text-decoration: none;
   position: fixed;
-  bottom: 5px;
-  right: 20px;
+  bottom: 1em;
+  right: 1em;
   display: none;
   transform: rotate(45deg);
   z-index: 11; }
@@ -6957,7 +6958,8 @@ button.scrollToTop:hover, button.scrollToTop:focus {
 
 button.scrollToTop:focus + #scrollAlert,
 button.scrollToTop:hover + #scrollAlert {
-  opacity: 1; }
+  opacity: 1;
+  z-index: 10; }
 
 /*********************
 LINK STYLES
@@ -7014,6 +7016,22 @@ h3.site-title {
   .off-canvas-list ul .dropdown {
     margin-left: 20px; }
 
+.header .show-for-small-only {
+  padding: 0; }
+
+input#s {
+  width: 100px;
+  background: transparent;
+  margin-left: 1em;
+  border: 1px solid #FAFAFA;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none; }
+
+input#s:focus {
+  width: 300px;
+  transition: 500ms; }
+
 /*********************
 HOME PAGE
 *********************/
@@ -7025,7 +7043,9 @@ HOME PAGE
   right: 0;
   top: 0px;
   z-index: -1;
-  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(transparent)); }
+  filter: hue-rotate(300deg);
+  -webkit-filter: hue-rotate(300deg);
+  transition: 2000ms; }
 
 .home #content #inner-content {
   padding-top: 0.1em; }
@@ -7041,28 +7061,78 @@ HOME PAGE
   border-bottom: 2em solid #f2f071; }
 
 .home article {
-  height: 55vh;
-  padding: 4em 2em;
+  height: auto;
+  padding: 6em 2em;
   float: right; }
 
 ul#categoryList {
   list-style-type: none;
-  margin: 2em 0em 3em 0em;
+  margin: 1em 0em 1em 0em;
   text-align: center;
   padding: 1em 0; }
   ul#categoryList li {
     display: inline-block;
-    width: 25%;
-    margin: 0 2%;
-    padding: 0em 3em; }
+    padding: 0em 3em;
+    margin: 1em 0em; }
     ul#categoryList li a {
       display: inline-block;
-      width: 100%;
+      width: 60%;
       font-size: 1.25em;
+      font-weight: 300;
       color: #555555;
       padding: 0.5em;
-      border-bottom: 1px solid #888888;
-      border-top: 1px solid #888888; }
+      border-bottom: 1px solid #EEEEEE;
+      border-top: 1px solid #EEEEEE;
+      transition: 500ms; }
+      ul#categoryList li a:hover, ul#categoryList li a:focus {
+        color: #006080;
+        border-bottom: 1px solid #006080;
+        border-top: 1px solid #006080; }
+      ul#categoryList li a:hover + span, ul#categoryList li a:focus + span {
+        opacity: 1; }
+    ul#categoryList li span {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      color: #FFFFFF;
+      background-color: #006080;
+      line-height: 30px;
+      text-align: center;
+      transition: 500ms;
+      opacity: 0; }
+
+#latestContainer,
+#featuredPage {
+  height: auto; }
+  #latestContainer h4,
+  #featuredPage h4 {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    font-size: 1.25em;
+    text-align: center;
+    text-transform: uppercase;
+    background: #555555; }
+    #latestContainer h4 a,
+    #featuredPage h4 a {
+      display: block;
+      height: 100%;
+      padding: 1em;
+      color: #FFFFFF;
+      transition: 500ms; }
+      #latestContainer h4 a:hover, #latestContainer h4 a:focus,
+      #featuredPage h4 a:hover,
+      #featuredPage h4 a:focus {
+        background: #006080; }
+  #latestContainer p,
+  #featuredPage p {
+    width: 100%;
+    height: auto;
+    background: #EEEEEE;
+    color: #555555;
+    padding: 1em;
+    font-size: 1.25em; }
 
 /*********************
 FOOTER
@@ -7071,10 +7141,50 @@ p.source-org.copyright {
   text-align: center; }
 
 /*********************
+ABOUT PAGE
+*********************/
+#profilePicture img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; }
+
+#contactDetails ul {
+  margin-left: 0; }
+  #contactDetails ul li {
+    list-style-type: none; }
+
+#cv {
+  padding-top: 2em; }
+
+/*********************
+LINKS PAGE
+*********************/
+ul.xoxo.blogroll {
+  margin-left: 0; }
+  ul.xoxo.blogroll li {
+    list-style-type: none;
+    padding: 1em 1em 1.5em 1em;
+    margin: 1.5em 0;
+    background: #F9F9F9;
+    border-bottom: 4px solid #f2f071; }
+    ul.xoxo.blogroll li a {
+      display: block;
+      font-size: 1.25em;
+      text-transform: uppercase; }
+
+i.fi-bookmark {
+  padding: 0 .25em;
+  color: tomato; }
+
+/*********************
 POSTS & CONTENT STYLES
 *********************/
+#main {
+  padding-top: 2em;
+  padding-bottom: 2em; }
+
 #content #inner-content {
-  padding: 4rem 0rem 1rem 0rem; }
+  padding: 4em 0em; }
 
 /* end .hentry */
 /* want to style individual post classes? Booya! */
@@ -7187,7 +7297,7 @@ COMMENT STYLES
   .commentlist .comment {
     background: white;
     border: none;
-    box-shadow: 1px 0px 2px #999; }
+    box-shadow: 1px 1px 1px 1px #999; }
   .commentlist .vcard {
     margin-left: 50px; }
     .commentlist .vcard cite.fn {
@@ -7426,6 +7536,29 @@ you can add resource intensive styles.
   *********************/
   .wrap {
     max-width: 1140px; }
+
+  #latestPosts {
+    padding: 1em 3em; }
+    #latestPosts h3 {
+      color: #555555;
+      text-align: center;
+      margin: 0em 0em 1em 0em;
+      font-weight: 400;
+      text-transform: uppercase; }
+
+  #latestContainer,
+  #featuredPage {
+    height: 200px; }
+    #latestContainer h4,
+    #featuredPage h4 {
+      width: 35%;
+      height: 100%;
+      float: left; }
+    #latestContainer p,
+    #featuredPage p {
+      width: 65%;
+      height: 100%;
+      float: left; }
 
   /*********************
   HEADER STYLES

@@ -7,8 +7,6 @@ this file will be called automatically in the footer so as not to
 slow the page load.
 
 */
-
-
 // as the page loads, call these scripts
 jQuery(document).ready(function($) {
 	// load Foundation
@@ -106,3 +104,4 @@ jQuery(document).ready(function(){
 	});
 
 });
+

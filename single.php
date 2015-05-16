@@ -15,12 +15,18 @@
 					   		<?php get_template_part( 'partials/content', 'missing' ); ?>
 
 					    <?php endif; ?>
+
+                        <?php joints_related_posts();?>
 			
 					</div> <!-- end #main -->
     
 					<?php get_sidebar(); ?>
 
+                    <div class="small-12 columns"><?php comments_template(); ?></div>
+
 				</div> <!-- end #inner-content -->
+
+
     
 			</div> <!-- end #content -->
 

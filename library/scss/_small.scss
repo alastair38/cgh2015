@@ -12,7 +12,9 @@ and will be used across all viewports.
 /*********************
 GENERAL STYLES
 *********************/
-body {}
+body {
+
+}
 
 /********************
 WORDPRESS BODY CLASSES
@@ -196,8 +198,8 @@ Scroll to top button
 *********************/
 
 .scrollToTop{
-	height:30px;
-    width: 30px;
+	height:1em;
+    width: 1em;
 	padding:0em;
     margin: 0;
     border-left: 1px solid;
@@ -206,8 +208,8 @@ Scroll to top button
 	color: #444;
 	text-decoration: none;
 	position:fixed;
-	bottom:5px;
-	right:20px;
+	bottom:1em;
+	right:1em;
 	display:none;
     transform: rotate(45deg);
     z-index: 11;
@@ -239,6 +241,7 @@ button.scrollToTop:focus + #scrollAlert,
 button.scrollToTop:hover + #scrollAlert
 {
     opacity: 1;
+    z-index: 10;
 }
 
 /*********************
@@ -350,6 +353,26 @@ h3.site-title{
 	}
 }
 
+.header .show-for-small-only {
+    padding: 0;
+}
+
+
+
+input#s {
+    width: 100px;
+    background: transparent;
+    margin-left: 1em;
+    border: 1px solid $ghost;
+    -webkit-box-shadow:    none;
+    -moz-box-shadow:       none;
+    box-shadow:            none;
+}
+
+input#s:focus {
+    width: 300px;
+    transition: 500ms;
+}
 
 /*********************
 HOME PAGE
@@ -363,8 +386,9 @@ HOME PAGE
     right: 0;
     top: 0px;
     z-index: -1;
-    -webkit-mask-image:
-    -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    filter: hue-rotate(300deg);
+    -webkit-filter: hue-rotate(300deg);
+    transition: 2000ms;
 }
 
 .home #content #inner-content {
@@ -385,32 +409,92 @@ HOME PAGE
 }
 
 .home article {
-    height: 55vh;
-    padding: 4em 2em;
+    height: auto;
+    padding: 6em 2em;
     float: right;
 }
 
 ul#categoryList {
     list-style-type: none;
-    margin: 2em 0em 3em 0em;
+    margin: 1em 0em 1em 0em;
     text-align: center;
     padding: 1em 0;
     & li {
         display: inline-block;
-        width: 25%;
-        margin: 0 2%;
         padding: 0em 3em;
+        margin: 1em 0em;
         & a {
             display: inline-block;
-            width: 100%;
+            width: 60%;
             font-size: 1.25em;
+            font-weight: 300;
             color: $charcoal;
             padding: 0.5em;
-            border-bottom: 1px solid $jumbo;
-            border-top: 1px solid $jumbo;
+            border-bottom: 1px solid $smoke;
+            border-top: 1px solid $smoke;
+            transition: 500ms;
+            &:hover,
+            &:focus {
+            color: $primary-color;
+            border-bottom: 1px solid $primary-color;
+            border-top: 1px solid $primary-color;
+            }
+            &:hover + span,
+            &:focus + span {
+            opacity: 1;
+            }
+        }
+        & span {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            color: $white;
+            background-color: $primary-color;
+            line-height: 30px;
+            text-align: center;
+            transition: 500ms;
+            opacity: 0;
         }
     }
 }
+
+
+
+#latestContainer,
+#featuredPage {
+    height: auto;
+    & h4 {
+        width: 100%;
+        height: auto;
+        margin: auto;
+        font-size: 1.25em;
+        text-align: center;
+        text-transform: uppercase;
+        background: $charcoal;
+        & a {
+            display: block;
+            height: 100%;
+            padding: 1em;
+            color: $white;
+            transition: 500ms;
+            &:hover,
+            &:focus {
+                background: $primary-color;
+            }
+        }
+    }
+    & p {
+        width: 100%;
+        height: auto;
+        background: $smoke;
+        color: $charcoal;
+        padding: 1em;
+        font-size: 1.25em;
+    }
+}
+
+
 
 
 /*********************
@@ -421,13 +505,68 @@ p.source-org.copyright {
     text-align: center;
 }
 
+
+/*********************
+ABOUT PAGE
+*********************/
+
+#profilePicture {
+    & img {
+         width: 150px;
+    height: 150px;
+    border-radius: 50%;
+        }
+}
+
+#contactDetails ul {
+    margin-left: 0;
+    & li {
+        list-style-type: none;
+    }
+}
+
+#cv {
+   padding-top: 2em;
+}
+
+/*********************
+LINKS PAGE
+*********************/
+
+ul.xoxo.blogroll {
+    margin-left: 0;
+    & li {
+        list-style-type: none;
+        padding: 1em 1em 1.5em 1em;
+        margin: 1.5em 0;
+        background: $snow;
+        border-bottom: 4px solid $contrast-color;
+        & a {
+            display:block;
+            font-size: 1.25em;
+            text-transform: uppercase;
+        }
+    }
+}
+
+i.fi-bookmark {
+    padding: 0 .25em;
+    color: tomato;
+}
+
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/
 
+#main {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
 #content {
 	#inner-content {
-		padding: 4rem 0rem 1rem 0rem;
+	 padding: 4em 0em;
 	}
 }
 
@@ -681,7 +820,7 @@ COMMENT STYLES
 	.comment {
         background: white;
         border: none;
-        box-shadow: 1px 0px 2px #999;
+        box-shadow: 1px 1px 1px 1px #999;
     }
 	.children {}
 	.pingback {}

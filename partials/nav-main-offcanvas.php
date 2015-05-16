@@ -1,7 +1,7 @@
 <div class="large-12 columns show-for-medium-up">
-	<div class="fixed contain-to-grid">
+	<div class="contain-to-grid fixed">
 	     <h3 class="site-title"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></h3>
-		<nav class="top-bar" role="navigation" data-topbar>
+		<nav class="top-bar" data-topbar data-options="scrolltop:false; is_hover: true" role="navigation" data-topbar>
 
 
 
@@ -15,10 +15,10 @@
 
 <!-- This is the nav that will show for mobile/small devices -->
 <div class="large-12 columns show-for-small-only">
-	<div class="contain-to-grid">
+	<div class="fixed contain-to-grid">
 		<nav class="tab-bar">
 			<section class="middle tab-bar-section">
-				<h1 class="title"><?php bloginfo('name'); ?></h1>
+				 <h3 class="mobile-title"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></h3>
 			</section>
 			<section class="left-small">
 				<a href="#navigation" class="left-off-canvas-toggle menu-icon" aria-label="navigation menu" ><span></span></a>

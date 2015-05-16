@@ -117,27 +117,28 @@ function joints_scripts_and_styles() {
     
     // modernizr (without media query polyfill)
     wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/bower_components/foundation/js/vendor/modernizr.js', array(), '2.5.3', false );
-    
-    // adding Foundation scripts file in the footer
-    wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/bower_components/foundation/js/foundation.js', array( 'jquery' ), $theme_version, true );
-
-    //adding joints script file in the footer
-    wp_enqueue_script( 'joints-js', get_template_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), $theme_version, true );
 
     //adding cookies script file in the footer
     wp_enqueue_script( 'cookies-js', get_template_directory_uri() . '/library/js/cookies.js', array( 'jquery' ), $theme_version, true );
 
+    // adding Foundation scripts file in the footer
+   wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/bower_components/foundation/js/foundation.js', array( 'jquery' ), $theme_version, true );
+
+       //adding joints script file in the footer
+    wp_enqueue_script( 'joints-js', get_template_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), $theme_version, true );
+
+
     //adding accessible-modal script file in the footer
-    wp_enqueue_script( 'accessible-modal-js', get_template_directory_uri() . '/library/js/accessible-modal.js', array( 'jquery' ), $theme_version, true );
+ //   wp_enqueue_script( 'accessible-modal-js', get_template_directory_uri() . '/library/js/accessible-modal.js', array( 'jquery' ), $theme_version, true );
 
       //adding slick.js cdn script file in the footer
-    wp_enqueue_script( 'slick-js', 'http://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js', array( 'jquery' ), $theme_version, true );
+   // wp_enqueue_script( 'slick-js', 'http://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js', array( 'jquery' ), $theme_version, true );
 
       //adding slick init script file in the footer
-    wp_enqueue_script( 'slick-init', get_template_directory_uri() . '/library/js/slick.js', array( 'slick-js' ), $theme_version, true );
+   // wp_enqueue_script( 'slick-init', get_template_directory_uri() . '/library/js/slick.js', array( 'slick-js' ), $theme_version, true );
 
      // register google fonts stylesheet
-     wp_enqueue_style( 'google fonts', 'http://fonts.googleapis.com/css?family=Lato:100,300,400', array(), $theme_version, 'all' );
+  wp_enqueue_style( 'google fonts', 'http://fonts.googleapis.com/css?family=Lato:100,300,400', array(), $theme_version, 'all' );
    
     // register main stylesheet
     wp_enqueue_style( 'joints-stylesheet', get_template_directory_uri() . '/library/css/style.css', array(), $theme_version, 'all' );
@@ -200,6 +201,17 @@ function joints_theme_support() {
 	         	'search-form', 
 	         ) 
 	);
+
+    add_filter('wp_nav_menu_items', 'add_search_form_to_menu', 10, 2);
+function add_search_form_to_menu($items, $args) {
+
+	// If this isn't the main navbar menu, do nothing
+	if( !($args->theme_location == 'main-nav') )
+		return $items;
+
+	// On main menu: put styling around search and append it to the menu items
+	return $items . '<li class="my-nav-menu-search">' . get_search_form(false) . '</li>';
+}
 	
 
 } /* end joints theme support */
@@ -212,16 +224,17 @@ RELATED POSTS FUNCTION
 function joints_related_posts() {
 	echo '<ul id="joints-related-posts">';
 	global $post;
-	$tags = wp_get_post_tags($post->ID);
-	if($tags) {
-		foreach($tags as $tag) { $tag_arr .= $tag->slug . ','; }
+	$cats = wp_get_post_categories($post->ID);
+	if($cats) {
+		foreach($cats as $cat) { $cat_arr .= $cat->slug . ','; }
         $args = array(
-        	'tag' => $tag_arr,
+        	'category' => $cat_arr,
         	'numberposts' => 5, /* you can change this to show more */
         	'post__not_in' => array($post->ID)
      	);
         $related_posts = get_posts($args);
         if($related_posts) {
+            echo '<h3>Related Items</h3>';
         	foreach ($related_posts as $post) : setup_postdata($post); ?>
 	           	<li class="related_post"><a class="entry-unrelated" href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
 	        <?php endforeach; }
@@ -351,8 +364,8 @@ add_filter( 'nav_menu_css_class', 'required_active_nav_class', 10, 2 );
 function joints_wpsearch($form) {
 	$form = '<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" >
 	<label class="screen-reader-text" for="s">' . __('Search for:', 'jointstheme') . '</label>
-	<input type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="'.esc_attr__('Search the Site...','jointstheme').'" />
-	<input type="submit" id="searchsubmit" class="button" value="'. esc_attr__('Search') .'" />
+	<input type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="'.esc_attr__('Search...','jointstheme').'" />
+	<input type="submit" id="searchsubmit" class="screen-reader-text" value="'. esc_attr__('Search') .'" />
 	</form>';
 	return $form;
 } // don't remove this bracket!
