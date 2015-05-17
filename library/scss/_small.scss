@@ -472,6 +472,10 @@ ul#categoryList {
         text-align: center;
         text-transform: uppercase;
         background: $charcoal;
+        &:hover + p > span,
+        &:focus + p > span {
+            opacity: 1;
+        }
         & a {
             display: block;
             height: 100%;
@@ -484,7 +488,19 @@ ul#categoryList {
             }
         }
     }
+    span {
+        background: rgba(255,255,255,.75);
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        padding: 1em;
+        opacity: 0;
+        transition: 500ms;
+    }
     & p {
+        position: relative;
         width: 100%;
         height: auto;
         background: $smoke;

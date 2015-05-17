@@ -7114,6 +7114,10 @@ ul#categoryList {
     text-align: center;
     text-transform: uppercase;
     background: #555555; }
+    #latestContainer h4:hover + p > span, #latestContainer h4:focus + p > span,
+    #featuredPage h4:hover + p > span,
+    #featuredPage h4:focus + p > span {
+      opacity: 1; }
     #latestContainer h4 a,
     #featuredPage h4 a {
       display: block;
@@ -7125,8 +7129,20 @@ ul#categoryList {
       #featuredPage h4 a:hover,
       #featuredPage h4 a:focus {
         background: #006080; }
+  #latestContainer span,
+  #featuredPage span {
+    background: rgba(255, 255, 255, 0.75);
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding: 1em;
+    opacity: 0;
+    transition: 500ms; }
   #latestContainer p,
   #featuredPage p {
+    position: relative;
     width: 100%;
     height: auto;
     background: #EEEEEE;
