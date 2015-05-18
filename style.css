@@ -1,46 +1,12 @@
 /******************************************************************
 Theme Name: Critical Global Health (Sass) - Accessible
-Theme URI: http://www.alastaircox.com
+Theme URI: https://github.com/alastair38/cgh2015
 Description: Bespoke theme for criticalglobalhealth.org
 Author: Alastair Cox
 Author URI: http://www.alastaircox.com
-Version: 2.0 (Sass)
-Foundation Version: 5.5.1
-Tags: 
-
-------------------------------------------------------------------
-
-This theme uses Sass.
-You will find the .scss files in the /library/scss directory.
-Those files compile to the styles.css found in the library/css directory.
-
-Reccomended tools for working with Sass:
-
-CodeKit: (Best)
-http://incident57.com/codekit/
-
-Compass App: (Windows / Mac Users)
-http://compass.handlino.com/
-
----------------------------------------------------------------
-
-Because this file is not being used for styles,
-feel free to use it to leave notes to yourself.
-
-----------------------------------------------------------------
-
-2.0 Changelog
-- header.php
--- Removed Google Chrome for IE (it is no longer supported by Google)
--- Removed mobile meta tags for Palm devices
--- Added favicons for iOS devices (retina and non-retina)
--- Added Top and Main menus
-
-- 404.php
--- Removed un-needed PHP from content
-
-- functions.pho
--- Registered and created "top" nav
-
+Version: 1.0.1
+GitHub Theme URI: https://github.com/alastair38/cgh2015
+GitHub Branch:    master
+Tags: 1.0.1
 ******************************************************************/
 
