@@ -10,8 +10,8 @@
 
 $include-html-accordion-classes: $include-html-classes !default;
 
-$accordion-navigation-padding: rem-calc(16) !default;
-$accordion-navigation-bg-color: $silver !default;
+$accordion-navigation-padding: rem-calc(8) !default;
+$accordion-navigation-bg-color: $contrast-color !default;
 $accordion-navigation-hover-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -5%) !default;
 $accordion-navigation-active-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -3%) !default;
 $accordion-navigation-font-color: $jet !default;
@@ -129,9 +129,23 @@ $accordion-content-active-bg-color: $white !default;
     .accordion {
       @include clearfix;
       margin-bottom: 0;
+      margin-left: 0;
       .accordion-navigation, dd {
+        position: relative;
         display: block;
         margin-bottom: 0 !important;
+        & .fi-plus {
+            display:block;
+            font-size: 1.5em;
+            width: 10px;
+            position: absolute;
+            right: 15px;
+            top:0px;
+            transition: 500ms;
+        }
+        &.active .fi-plus {
+            transform: rotate(405deg);
+        }
         &.active > a { background: $accordion-navigation-active-bg-color; }
         > a {
           background: $accordion-navigation-bg-color;
@@ -146,6 +160,7 @@ $accordion-content-active-bg-color: $white !default;
         > .content {
           display: none;
           padding: $accordion-content-padding;
+          border-bottom: 1px solid $oil;
           &.active {
             display: block;
             background: $accordion-content-active-bg-color;

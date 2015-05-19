@@ -6,30 +6,12 @@ Styles apply to 40.063em and up.
 
 ******************************************************************/
 
-h3.site-title{
-    float: left;
-    width: 100%;
-    margin-bottom: 0;
-    padding: 0 .5em;
-    text-align: center;
-   & a {
-       color: $oil;
-   }
-}
 	
 /*********************
 NAVIGATION STYLES
 *********************/
 
-.contain-to-grid {
-    height: 85px;
-}
 
-.top-bar-section ul {
-    float: none;
-    display: table;
-    margin: 0 auto;
-}
 
 /*********************
 POSTS & CONTENT STYLES

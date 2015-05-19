@@ -60,9 +60,13 @@ HEADER STYLES
 h3.site-title{
     float: left;
     width: auto;
+    margin-top: 0;
     margin-bottom: 0;
-    padding: 0 1em;
+    height: 100%;
+    font-size: 1.5em;
+    padding: 0;
     text-align: center;
+    font-weight: 400;
    & a {
        color: $oil;
    }
@@ -72,18 +76,22 @@ h3.site-title{
 NAVIGATION STYLES
 *********************/
 
-.contain-to-grid {
-    height: auto;
+.contain-to-grid,
+.tab-bar-section {
+    height: 4em;
 }
 
-input#s:focus {
-    width: 300px;
-    transition: 500ms;
+.tab-bar {
+    background: $white;
+    & a {
+        color: $oil;
+    }
 }
 
-.top-bar-section ul {
-
+ul#menu-top-bar {
+    width: 30%;
 }
+
 
 /*********************
 SIDEBARS & ASIDES

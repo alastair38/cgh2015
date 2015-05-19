@@ -54,13 +54,13 @@ function joints_main_nav() {
 } /* end joints main nav */
 
 // THE FOOTER MENU
-function joints_footer_links() {
+function joints_top_nav() {
     wp_nav_menu(array(
     	'container' => '',                              // remove nav container
     	'container_class' => 'footer-links clearfix',   // class of container (should you choose to use it)
-    	'menu' => __( 'Footer Links', 'jointstheme' ),   // nav name
-    	'menu_class' => 'sub-nav',      // adding custom nav class
-    	'theme_location' => 'footer-links',             // where it's located in the theme
+    	'menu' => __( 'Top Menu', 'jointstheme' ),   // nav name
+    	'menu_class' => '',      // adding custom nav class
+    	'theme_location' => 'top-nav',             // where it's located in the theme
     	'before' => '',                                 // before the menu
         'after' => '',                                  // after the menu
         'link_before' => '',                            // before each link

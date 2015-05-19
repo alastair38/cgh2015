@@ -291,7 +291,8 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
     }
 
     // Right and Left Navigation that stacked by default
-    .top-bar-section {
+    .top-bar-section,
+    .tab-bar-section {
       #{$default-float}: 0;
       position: relative;
       width: auto;
@@ -317,20 +318,23 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
       ul li {
         background: none;
         & > a {
-          display: block;
-          width: 100%;
+          display: inline-block;
           color: $topbar-link-color;
-          padding: 12px 0 12px 0;
-          padding-#{$default-float}: $topbar-link-padding;
+          padding: 0 1.5em;
           font-family: $topbar-link-font-family;
           font-size: $topbar-link-font-size;
           font-weight: $topbar-link-weight;
           text-transform: $topbar-link-text-transform;
 
-         &:focus{
+        &:hover{
+            background: $ghost;
+          }
+        &:focus{
             background: $ghost;
             color: $topbar-link-color-active-hover;
           }
+        }
+
 
           &.button {
             font-size: $topbar-link-font-size;
@@ -342,7 +346,7 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
           &.button.success { @include button-style($bg:$success-color); }
           &.button.alert { @include button-style($bg:$alert-color); }
           &.button.warning { @include button-style($bg:$warning-color); }
-        }
+
 
         > button {
           font-size: $topbar-link-font-size;
@@ -357,19 +361,16 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
         }
 
         // Apply the hover link color when it has that class
-        &:hover:not(.has-form) > a {
-          background: $ghost;
+        &:hover:not(.has-form) {
           color: $topbar-link-color-hover;
         }
 
         // Apply the active link color when it has that class
         &.active > a {
-          background: $ghost;
-          color: $topbar-link-color-active;
           text-decoration: underline;
-          &:hover{
-            background: $ghost;
-            color: $topbar-link-color-active-hover;
+          color: $topbar-link-color-active;
+          &:hover {
+            color: $topbar-link-color-active;
           }
           &:focus{
             background: $ghost;

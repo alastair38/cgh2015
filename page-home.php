@@ -24,11 +24,12 @@ Template Name: Home (No Sidebar)
                 $args = array(
                   'orderby' => 'name',
                   'order' => 'ASC',
-                  'hide_empty' => 0
+                  'hide_empty' => 0,
+                  'parent' => 0
                   );
                 $categories = get_categories($args);
                   foreach($categories as $category) {
-                    echo '<li class="large-4 medium-4 small-12 columns"><a href="' . get_category_link( $category->term_id ) . '" aria-label="Follow link to view ' . $category->count . ' posts in ' . $category->name . '" title="' . sprintf( __( "View " . $category->count . " post(s) in %s" ), $category->name ) . '" ' . '>' . $category->name .'</a><span>' . $category->count . '</span></li>';
+                    echo '<li class="large-3 medium-3 small-12 columns"><a href="' . get_category_link( $category->term_id ) . '" aria-label="Follow link to view ' . $category->count . ' posts in ' . $category->name . '" title="' . sprintf( __( "View " . $category->count . " post(s) in %s" ), $category->name ) . '" ' . '>' . $category->name .'</a></li>';
                     }
                 ?>
 

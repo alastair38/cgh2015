@@ -206,11 +206,11 @@ function joints_theme_support() {
 function add_search_form_to_menu($items, $args) {
 
 	// If this isn't the main navbar menu, do nothing
-	if( !($args->theme_location == 'main-nav') )
+	if( !($args->theme_location == 'top-nav') )
 		return $items;
 
 	// On main menu: put styling around search and append it to the menu items
-	return $items . '<li class="my-nav-menu-search">' . get_search_form(false) . '</li>';
+	return $items . '<li id="my-nav-menu-search">' . get_search_form(false) . '</li>';
 }
 	
 
@@ -364,7 +364,7 @@ add_filter( 'nav_menu_css_class', 'required_active_nav_class', 10, 2 );
 function joints_wpsearch($form) {
 	$form = '<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" >
 	<label class="screen-reader-text" for="s">' . __('Search for:', 'jointstheme') . '</label>
-	<input type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="'.esc_attr__('Search...','jointstheme').'" />
+	<input type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="'.esc_attr__('Search ..... type your query and hit enter','jointstheme').'" />
 	<input type="submit" id="searchsubmit" class="screen-reader-text" value="'. esc_attr__('Search') .'" />
 	</form>';
 	return $form;

@@ -1,5 +1,5 @@
 <!doctype html>
-
+   <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
   <html class="no-js"  <?php language_attributes(); ?>>
 
 	<head>
@@ -24,6 +24,16 @@
 		 <meta name="theme-color" content="#121212">
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+
+
+        <!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/library/css/styleie.css" />
+	 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+  <script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+  <script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+<![endif]-->
 
 		<?php wp_head(); ?>
 

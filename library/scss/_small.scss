@@ -328,20 +328,49 @@ NAVIGATION STYLES
 	}
 } 
 
+ul#menu-top-bar {
+    list-style-type: none;
+    height: 4em;
+    float: right;
+    width: 45%;
+}
+
+ul#menu-top-bar li {
+    display: inline;
+    height: 4em;
+    line-height: 4em;
+}
+
+ul#menu-top-bar input#s{
+    background:$white;
+    float: right;
+    position:absolute;
+    top: 1em;
+    right: 0;
+    width: 80px;
+    border: 1px solid $ghost;
+    -webkit-box-shadow:    none;
+    -moz-box-shadow:       none;
+    box-shadow:            none;
+    &:focus {
+        border: 5px solid $ghost;
+        width: 100%;
+        transition: 500ms;
+        top: 0;
+        height: 100%;
+    }
+}
+
+
 h3.site-title{
     float: left;
     width: auto;
-    margin-bottom: 0;
-    padding: 0 1em;
-    text-align: center;
+
    & a {
        color: $oil;
    }
 }
 
-h3.mobile-title a {
-    color: $white;
-}
 
 .off-canvas-list {
 	ul {
@@ -362,21 +391,6 @@ h3.mobile-title a {
 }
 
 
-
-input#s {
-    width: 100px;
-    background: transparent;
-    margin-left: 1em;
-    border: 1px solid $ghost;
-    -webkit-box-shadow:    none;
-    -moz-box-shadow:       none;
-    box-shadow:            none;
-}
-
-input#s:focus {
-    width: 150px;
-    transition: 500ms;
-}
 
 /*********************
 HOME PAGE
@@ -420,16 +434,16 @@ HOME PAGE
 
 ul#categoryList {
     list-style-type: none;
-    margin: 1em 0em 1em 0em;
+    margin: 1em 0em;
     text-align: center;
     padding: 1em 0;
     & li {
         display: inline-block;
-        padding: 0em 3em;
+        padding: 0em 2em;
         margin: 1em 0em;
         & a {
             display: inline-block;
-            width: 60%;
+            width: 100%;
             font-size: 1.25em;
             font-weight: 300;
             color: $charcoal;
@@ -575,6 +589,38 @@ i.fi-bookmark {
     color: tomato;
 }
 
+
+/*********************
+ACCORDION STYLES
+*********************/
+
+.accordion
+{
+  .accordion-navigation
+  {
+    .content
+    {
+      display: block;
+      max-height: 0;
+      overflow-y: hidden;
+      // leave the top and bottom padding at 0, have the sides match the .active element's padding value below
+      padding: rem-calc(0 16);
+      // change as desired but the transition needs to cover both max-height and padding; this is how long the panel takes to close
+      transition: ease 0.4s all;
+      &.active
+      {
+        // change as desired
+        max-height: 80vh;
+        // change as desired
+        padding: rem-calc(16);
+        // change as desired; this is how long the panel takes to open
+        transition: ease 0.4s all;
+        // change as desired, but for best results keep at around half the other transition durations
+        transition-delay: 0.2s;
+      }
+    }
+  }
+}
 
 /*********************
 POSTS & CONTENT STYLES
