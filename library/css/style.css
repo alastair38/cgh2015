@@ -7009,6 +7009,9 @@ h3.site-title {
   h3.site-title a {
     color: #333333; }
 
+h3.mobile-title a {
+  color: #FFFFFF; }
+
 .off-canvas-list ul {
   margin-left: 0; }
   .off-canvas-list ul li a {
@@ -7029,7 +7032,7 @@ input#s {
   box-shadow: none; }
 
 input#s:focus {
-  width: 300px;
+  width: 150px;
   transition: 500ms; }
 
 /*********************
@@ -7139,12 +7142,13 @@ ul#categoryList {
     bottom: 0;
     padding: 1em;
     opacity: 0;
-    transition: 500ms; }
+    transition: 500ms;
+    overflow: hidden; }
   #latestContainer p,
   #featuredPage p {
     position: relative;
     width: 100%;
-    height: auto;
+    min-height: 150px;
     background: #EEEEEE;
     color: #555555;
     padding: 1em;
@@ -7449,7 +7453,7 @@ FOOTER STYLES
 *********************/
 .footer {
   clear: both;
-  margin-top: 1em; }
+  padding-top: 4em; }
 
 /*
 if you checked out the link above:
@@ -7485,9 +7489,26 @@ MEDIUM
   Styles apply to 40.063em and up.
   
   ******************************************************************/
+  h3.site-title {
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+    padding: 0 .5em;
+    text-align: center; }
+    h3.site-title a {
+      color: #333333; }
+
   /*********************
   NAVIGATION STYLES
   *********************/
+  .contain-to-grid {
+    height: 85px; }
+
+  .top-bar-section ul {
+    float: none;
+    display: table;
+    margin: 0 auto; }
+
   /*********************
   POSTS & CONTENT STYLES
   *********************/
@@ -7554,7 +7575,7 @@ you can add resource intensive styles.
     max-width: 1140px; }
 
   #latestPosts {
-    padding: 1em 3em; }
+    padding: 0em 3em; }
     #latestPosts h3 {
       color: #555555;
       text-align: center;
@@ -7579,9 +7600,25 @@ you can add resource intensive styles.
   /*********************
   HEADER STYLES
   *********************/
+  h3.site-title {
+    float: left;
+    width: auto;
+    margin-bottom: 0;
+    padding: 0 1em;
+    text-align: center; }
+    h3.site-title a {
+      color: #333333; }
+
   /*********************
   NAVIGATION STYLES
   *********************/
+  .contain-to-grid {
+    height: auto; }
+
+  input#s:focus {
+    width: 300px;
+    transition: 500ms; }
+
   /*********************
   SIDEBARS & ASIDES
   *********************/

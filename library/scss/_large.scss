@@ -22,7 +22,7 @@ LAYOUT & GRID STYLES
 }
 
 #latestPosts {
-    padding: 1em 3em;
+    padding: 0em 3em;
     & h3 {
         color: $charcoal;
         text-align: center;
@@ -57,9 +57,33 @@ HEADER STYLES
 
 	#logo {}
 
+h3.site-title{
+    float: left;
+    width: auto;
+    margin-bottom: 0;
+    padding: 0 1em;
+    text-align: center;
+   & a {
+       color: $oil;
+   }
+}
+
 /*********************
 NAVIGATION STYLES
 *********************/
+
+.contain-to-grid {
+    height: auto;
+}
+
+input#s:focus {
+    width: 300px;
+    transition: 500ms;
+}
+
+.top-bar-section ul {
+
+}
 
 /*********************
 SIDEBARS & ASIDES

@@ -339,6 +339,10 @@ h3.site-title{
    }
 }
 
+h3.mobile-title a {
+    color: $white;
+}
+
 .off-canvas-list {
 	ul {
 		margin-left: 0;
@@ -370,7 +374,7 @@ input#s {
 }
 
 input#s:focus {
-    width: 300px;
+    width: 150px;
     transition: 500ms;
 }
 
@@ -498,11 +502,12 @@ ul#categoryList {
         padding: 1em;
         opacity: 0;
         transition: 500ms;
+        overflow: hidden;
     }
     & p {
         position: relative;
         width: 100%;
-        height: auto;
+        min-height: 150px;
         background: $smoke;
         color: $charcoal;
         padding: 1em;
@@ -1060,7 +1065,7 @@ FOOTER STYLES
 
 .footer {
 	clear: both;
-	margin-top: 1em;
+	padding-top: 4em;
 }
 
 	/*
