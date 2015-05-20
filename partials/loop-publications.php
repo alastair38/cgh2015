@@ -45,6 +45,10 @@
                 echo wp_kses($content, null); ?>
                 </p>
 
+                <?php if( get_field('publication') ): ?>
+                <p><span>Publisher:</span><?php echo esc_html (get_field('publication')); ?></p>
+                <?php endif; ?>
+
                 <?php if( get_field('publisher') ): ?>
                 <p><span>Publisher:</span><?php echo esc_html (get_field('publisher')); ?></p>
                 <?php endif; ?>

@@ -5574,6 +5574,22 @@ ul.off-canvas-list {
     ul.off-canvas-list li a:hover {
       background: #b3b3b3; }
 
+.tab-bar .menu-icon:focus span:after {
+  box-shadow: 0 0 0 1px tomato, 0 7px 0 1px tomato, 0 14px 0 1px tomato; }
+
+ul#menu-the-main-menu li a:hover,
+ul#menu-the-main-menu li a:focus {
+  background: #F9F9F9; }
+
+a.exit-off-canvas span {
+  display: none; }
+
+a.exit-off-canvas:focus span {
+  display: inline-block;
+  padding: 10px;
+  background: tomato;
+  color: #FFFFFF; }
+
 .move-right > .inner-wrap {
   -ms-transform: translate(15.625rem, 0);
   -webkit-transform: translate3d(15.625rem, 0, 0);

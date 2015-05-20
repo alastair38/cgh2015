@@ -4,7 +4,7 @@
 	<div class="fixed contain-to-grid">
 		<nav class="tab-bar" data-options="scrolltop:false; is_hover: true" role="navigation" data-tabbar>
 			<section class="middle tab-bar-section">
-				 <h3 class="site-title"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></h3>
+				 <h3 class="site-title" tabindex="-1"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></h3>
                  <span class="show-for-medium-up"><?php joints_top_nav(); ?></span>
 			</section>
 			<section class="left-small">
@@ -21,4 +21,4 @@
 	</ul>
 </aside>
 			
-<a class="exit-off-canvas"></a>
+<a href="#exit" class="exit-off-canvas"><span>Press to Exit Menu</span></a>

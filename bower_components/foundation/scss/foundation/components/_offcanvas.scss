@@ -328,6 +328,28 @@ $menu-slide: "transform 500ms ease" !default;
 
     ul.off-canvas-list { @include off-canvas-list; }
 
+      .tab-bar .menu-icon:focus span:after {
+        box-shadow: 0 0 0 1px tomato, 0 7px 0 1px tomato, 0 14px 0 1px tomato;
+      }
+
+    ul#menu-the-main-menu li a:hover,
+    ul#menu-the-main-menu li a:focus {
+        background: $snow;
+    }
+
+    a.exit-off-canvas span {
+        display: none;
+    }
+
+    a.exit-off-canvas:focus span {
+        display: inline-block;
+        padding: 10px;
+        background: tomato;
+        color: $white;
+    }
+
+
+
 
     // ANIMATION CLASSES
     // These classes are added with JS and trigger the actual animation.
