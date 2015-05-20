@@ -7,8 +7,11 @@ $lastposts = get_posts( $args ); ?>
 <div id="latestContainer">
 <?php
 foreach($lastposts as $post) : setup_postdata($post); ?>
-    <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-	<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+    <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
+    $title = get_the_title();
+    $trimmed_title = wp_trim_words( $title, 8, '...' );
+    ?>
+	<h4><a href="<?php the_permalink(); ?>"><?php echo $trimmed_title; ?></a></h4>
     <?php
     $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
 

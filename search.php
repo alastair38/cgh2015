@@ -4,7 +4,7 @@
 
 				<div id="inner-content" class="row">
 			
-					<div id="main" class="large-8 medium-8 columns first" role="main">
+					<div id="main" class="large-12 medium-12 small-12 columns first" role="main">
 						<h1 class="archive-title"><span><?php _e('Search Results for:', 'jointstheme'); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -18,7 +18,11 @@
 								</header> <!-- end article header -->
 					
 								<section class="entry-content">
-									<?php the_content('<button class="tiny">Read more...</button>'); ?> 
+                                <?php
+                                $content = get_the_content();
+                                $trimmed_content = wp_trim_words( $content, 40, null );
+                                echo $trimmed_content;
+                                ?>
 								</section> <!-- end article section -->
 						
 								<footer class="article-footer">
@@ -51,9 +55,7 @@
 					    <?php endif; ?>
 			
 				    </div> <!-- end #main -->
-    			
-    			    <?php get_sidebar(); ?>
-    			
+
     			</div> <!-- end #inner-content -->
     
 			</div> <!-- end #content -->

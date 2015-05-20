@@ -7619,6 +7619,9 @@ SIDEBARS & ASIDES
   .single .sidebar ul#sidebarLinks {
     margin-left: 0; }
 
+.sidebar p:first-of-type {
+  padding-top: 1em; }
+
 ul#sidebarLinks {
   list-style-type: none; }
 

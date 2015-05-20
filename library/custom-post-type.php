@@ -154,6 +154,18 @@ if(function_exists("register_field_group"))
 				'formatting' => 'none',
 				'maxlength' => '',
 			),
+            array (
+				'key' => 'field_555ce4c215b96',
+				'label' => 'Publication',
+				'name' => 'publication',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
 			array (
 				'key' => 'field_555baff6e6bf5',
 				'label' => 'Publication Date',

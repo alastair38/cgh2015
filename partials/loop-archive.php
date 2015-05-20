@@ -23,9 +23,10 @@
 		<section class="entry-content" itemprop="articleBody">
             <?php
             $content = get_the_content();
-    $trimmed_content = wp_trim_words( $content, 40, null );
+    $trimmed_content = wp_trim_words( $content, 40, '...' );
             echo $trimmed_content;
 ?>
+            <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">View Article</a>
 		</section> <!-- end article section -->
 		</div>
 	</article> <!-- end article -->
