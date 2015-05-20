@@ -92,7 +92,104 @@ if(function_exists("register_field_group"))
 		),
 		'menu_order' => 0,
 	));
+
 }
+
+if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_add-attachment',
+		'title' => 'Add Attachment',
+		'fields' => array (
+			array (
+				'key' => 'field_555bb05fc5b3b',
+				'label' => 'Document',
+				'name' => 'document',
+				'type' => 'file',
+				'save_format' => 'url',
+				'library' => 'all',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'post',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'side',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+				0 => 'permalink',
+				1 => 'excerpt',
+				2 => 'custom_fields',
+				3 => 'discussion',
+				4 => 'comments',
+				5 => 'revisions',
+				6 => 'author',
+				7 => 'format',
+				8 => 'send-trackbacks',
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_publication-details',
+		'title' => 'Publication Details',
+		'fields' => array (
+			array (
+				'key' => 'field_555bafe7e6bf4',
+				'label' => 'Publisher',
+				'name' => 'publisher',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_555baff6e6bf5',
+				'label' => 'Publication Date',
+				'name' => 'publication_date',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_category',
+					'operator' => '==',
+					'value' => '5',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'acf_after_title',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+}
+
+
+
 
 
 ?>

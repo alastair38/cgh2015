@@ -1581,7 +1581,7 @@ select {
     right: 91.66667%;
     left: auto; } }
 .accordion {
-  margin-bottom: 0;
+  margin-bottom: 2em;
   margin-left: 0; }
   .accordion:before, .accordion:after {
     content: " ";
@@ -1591,7 +1591,7 @@ select {
   .accordion .accordion-navigation, .accordion dd {
     position: relative;
     display: block;
-    margin-bottom: 0 !important; }
+    margin-bottom: 0.5em !important; }
     .accordion .accordion-navigation .fi-plus, .accordion dd .fi-plus {
       display: block;
       font-size: 1.5em;
@@ -1603,20 +1603,27 @@ select {
     .accordion .accordion-navigation.active .fi-plus, .accordion dd.active .fi-plus {
       transform: rotate(405deg); }
     .accordion .accordion-navigation.active > a, .accordion dd.active > a {
-      background: #f1ef67; }
+      background: #525252; }
     .accordion .accordion-navigation > a, .accordion dd > a {
-      background: #f2f071;
-      color: #222222;
+      background: #555555;
+      color: #FFFFFF;
       padding: 0.5rem;
       display: block;
       font-family: "Lato", Helvetica, Roboto, Arial, sans-serif;
       font-size: 1rem; }
       .accordion .accordion-navigation > a:hover, .accordion dd > a:hover {
-        background: #f1ee61; }
+        background: #515151; }
+      .accordion .accordion-navigation > a h4, .accordion dd > a h4 {
+        color: #FFFFFF;
+        font-size: 1.1em; }
     .accordion .accordion-navigation > .content, .accordion dd > .content {
       display: none;
       padding: 0.9375rem;
       border-bottom: 1px solid #333333; }
+      .accordion .accordion-navigation > .content span, .accordion dd > .content span {
+        padding: 0 5px 0 0;
+        font-weight: bold;
+        text-transform: uppercase; }
       .accordion .accordion-navigation > .content.active, .accordion dd > .content.active {
         display: block;
         background: #FFFFFF; }
@@ -7123,7 +7130,8 @@ ul#menu-top-bar input#s {
 
 h3.site-title {
   float: left;
-  width: auto; }
+  width: auto;
+  font-size: 1em; }
   h3.site-title a {
     color: #333333; }
 
@@ -7195,17 +7203,6 @@ ul#categoryList {
         border-top: 1px solid #006080; }
       ul#categoryList li a:hover + span, ul#categoryList li a:focus + span {
         opacity: 1; }
-    ul#categoryList li span {
-      display: inline-block;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      color: #FFFFFF;
-      background-color: #006080;
-      line-height: 30px;
-      text-align: center;
-      transition: 500ms;
-      opacity: 0; }
 
 #latestContainer,
 #featuredPage {
@@ -7256,6 +7253,11 @@ ul#categoryList {
     padding: 1em;
     font-size: 1.25em; }
 
+.sub-title {
+  margin-bottom: 1em;
+  display: inline-block;
+  border-bottom: 1px solid #555555; }
+
 /*********************
 FOOTER
 *********************/
@@ -7288,7 +7290,7 @@ ul.xoxo.blogroll {
     padding: 1em 1em 1.5em 1em;
     margin: 1.5em 0;
     background: #F9F9F9;
-    border-bottom: 4px solid #f2f071; }
+    border-bottom: 4px solid #555555; }
     ul.xoxo.blogroll li a {
       display: block;
       font-size: 1.25em;
@@ -7299,8 +7301,19 @@ i.fi-bookmark {
   color: tomato; }
 
 /*********************
-ACCORDION STYLES
+PUBLICATIONS + ACCORDION STYLES
 *********************/
+#publications h5 {
+  background: #555555;
+  color: #FFFFFF;
+  padding: 5px;
+  text-align: center; }
+#publications article {
+  background: #FFFFFF; }
+#publications span {
+  font-weight: bold;
+  padding-right: 5px; }
+
 .accordion .accordion-navigation .content {
   display: block;
   max-height: 0;
@@ -7308,7 +7321,7 @@ ACCORDION STYLES
   padding: 0 1rem;
   transition: ease 0.4s all; }
   .accordion .accordion-navigation .content.active {
-    max-height: 80vh;
+    max-height: 800px;
     padding: 1rem;
     transition: ease 0.4s all;
     transition-delay: 0.2s; }
@@ -7324,6 +7337,48 @@ POSTS & CONTENT STYLES
   padding: 4em 0em; }
 
 /* end .hentry */
+.single-title {
+  border-bottom: 5px solid #f2f071; }
+
+.page-title {
+  margin-bottom: 1em;
+  border-bottom: 5px solid #f2f071; }
+
+.category article {
+  background: #F9F9F9;
+  height: auto;
+  padding: 0; }
+  .category article .large-3,
+  .category article .medium-3,
+  .category article .small-12 {
+    padding: 0; }
+    .category article .large-3 img,
+    .category article .medium-3 img,
+    .category article .small-12 img {
+      width: 100%; }
+.category .article-header {
+  background: #006080; }
+  .category .article-header h2 {
+    font-size: 1.5em;
+    margin: 0;
+    text-align: center; }
+    .category .article-header h2 a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      color: #FFFFFF;
+      padding: .25em;
+      transition: 500ms; }
+      .category .article-header h2 a:hover, .category .article-header h2 a:focus {
+        background: #555555; }
+.category .entry-content {
+  height: auto;
+  padding: 10px 10px 0 10px; }
+  .category .entry-content p {
+    font-size: 1.25em;
+    font-weight: 300;
+    padding: 10px; }
+
 /* want to style individual post classes? Booya! */
 /* post by id (i.e. post-3) */
 /* general post style */
@@ -7335,7 +7390,8 @@ POSTS & CONTENT STYLES
 /* style by tag (i.e. tag-news) */
 /* post meta */
 .byline {
-  color: #333333; }
+  color: #555555;
+  font-style: italic; }
 
 /* entry content */
 .entry-content {
@@ -7556,6 +7612,16 @@ COMMENT FORM STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
+.single .sidebar {
+  background: #FAFAFA;
+  padding: 0;
+  text-align: center; }
+  .single .sidebar ul#sidebarLinks {
+    margin-left: 0; }
+
+ul#sidebarLinks {
+  list-style-type: none; }
+
 .widget ul {
   margin: 0; }
   .widget ul li {

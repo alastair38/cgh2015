@@ -11,10 +11,10 @@
 $include-html-accordion-classes: $include-html-classes !default;
 
 $accordion-navigation-padding: rem-calc(8) !default;
-$accordion-navigation-bg-color: $contrast-color !default;
+$accordion-navigation-bg-color: $charcoal !default;
 $accordion-navigation-hover-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -5%) !default;
 $accordion-navigation-active-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -3%) !default;
-$accordion-navigation-font-color: $jet !default;
+$accordion-navigation-font-color: $white !default;
 $accordion-navigation-font-size: rem-calc(16) !default;
 $accordion-navigation-font-family: $body-font-family !default;
 
@@ -128,12 +128,12 @@ $accordion-content-active-bg-color: $white !default;
   @if $include-html-accordion-classes {
     .accordion {
       @include clearfix;
-      margin-bottom: 0;
+      margin-bottom: 2em;
       margin-left: 0;
       .accordion-navigation, dd {
         position: relative;
         display: block;
-        margin-bottom: 0 !important;
+        margin-bottom: 0.5em !important;
         & .fi-plus {
             display:block;
             font-size: 1.5em;
@@ -155,12 +155,21 @@ $accordion-content-active-bg-color: $white !default;
           font-family: $accordion-navigation-font-family;
           font-size: $accordion-navigation-font-size;
           &:hover { background: $accordion-navigation-hover-bg-color; }
+          & h4 {
+              color: $accordion-navigation-font-color;
+              font-size: 1.1em;
+          }
         }
 
         > .content {
           display: none;
           padding: $accordion-content-padding;
           border-bottom: 1px solid $oil;
+          & span {
+              padding: 0 5px 0 0;
+              font-weight: bold;
+              text-transform: uppercase;
+          }
           &.active {
             display: block;
             background: $accordion-content-active-bg-color;

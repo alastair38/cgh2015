@@ -4,10 +4,10 @@
 			
 				<div id="inner-content" class="row">
 				
-				    <div id="main" class="large-8 medium-8 columns first" role="main">
+				    <div id="main" class="large-12 medium-12 columns first" role="main">
 				
 					    <?php if (is_category()) { ?>
-						    <h1>
+						    <h1 class="page-title">
 							    <?php single_cat_title(); ?>
 					    	</h1>
 					    
@@ -39,11 +39,13 @@
 					        </h1>
 					    <?php } ?>
 					    	<!-- To see additional archive styles, visit the /partials directory -->
-					    	<?php get_template_part( 'partials/loop', 'archive' ); ?>					
+					    	<?php get_template_part( 'partials/loop', 'archive' ); ?>
+
+
 			
     				</div> <!-- end #main -->
-    
-	    			<?php get_sidebar(); ?>
+
+	    			 <?php get_sidebar(); ?>
                 
                 </div> <!-- end #inner-content -->
                 

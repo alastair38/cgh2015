@@ -1141,7 +1141,7 @@ select {
     right: 91.66667%;
     left: auto; } }
 .accordion {
-  margin-bottom: 0;
+  margin-bottom: 2em;
   margin-left: 0; }
   .accordion:before, .accordion:after {
     content: " ";
@@ -1151,7 +1151,7 @@ select {
   .accordion .accordion-navigation, .accordion dd {
     position: relative;
     display: block;
-    margin-bottom: 0 !important; }
+    margin-bottom: 0.5em !important; }
     .accordion .accordion-navigation .fi-plus, .accordion dd .fi-plus {
       display: block;
       font-size: 1.5em;
@@ -1163,20 +1163,27 @@ select {
     .accordion .accordion-navigation.active .fi-plus, .accordion dd.active .fi-plus {
       transform: rotate(405deg); }
     .accordion .accordion-navigation.active > a, .accordion dd.active > a {
-      background: #f1ef67; }
+      background: #525252; }
     .accordion .accordion-navigation > a, .accordion dd > a {
-      background: #f2f071;
-      color: #222222;
+      background: #555555;
+      color: #FFFFFF;
       padding: 0.5rem;
       display: block;
       font-family: "Lato", Helvetica, Roboto, Arial, sans-serif;
       font-size: 1rem; }
       .accordion .accordion-navigation > a:hover, .accordion dd > a:hover {
-        background: #f1ee61; }
+        background: #515151; }
+      .accordion .accordion-navigation > a h4, .accordion dd > a h4 {
+        color: #FFFFFF;
+        font-size: 1.1em; }
     .accordion .accordion-navigation > .content, .accordion dd > .content {
       display: none;
       padding: 0.9375rem;
       border-bottom: 1px solid #333333; }
+      .accordion .accordion-navigation > .content span, .accordion dd > .content span {
+        padding: 0 5px 0 0;
+        font-weight: bold;
+        text-transform: uppercase; }
       .accordion .accordion-navigation > .content.active, .accordion dd > .content.active {
         display: block;
         background: #FFFFFF; }

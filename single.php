@@ -4,7 +4,7 @@
 
 				<div id="inner-content" class="row">
 			
-					<div id="main" class="large-8 medium-8 columns first" role="main">
+					<div id="main" class="large-12 medium-12 columns first" role="main">
 					
 					    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
@@ -16,11 +16,10 @@
 
 					    <?php endif; ?>
 
-                        <?php joints_related_posts();?>
+
 			
 					</div> <!-- end #main -->
-    
-					<?php get_sidebar(); ?>
+
 
                     <div class="small-12 columns"><?php comments_template(); ?></div>
 

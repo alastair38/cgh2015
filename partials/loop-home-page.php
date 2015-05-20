@@ -6,7 +6,7 @@
 
 		<header class="article-header">
 
-			<h1 class="page-title"></h1>
+			<h1 class=""></h1>
 		</header> <!-- end article header -->
 
 	    <section class="entry-content" itemprop="articleBody">

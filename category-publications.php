@@ -4,15 +4,17 @@
 
 				<div id="inner-content" class="row">
 
-				    <div id="main" class="large-8 medium-8 columns first" role="main">
+				    <div id="main" class="large-12 medium-12 columns first" role="main">
 
 
-						    <h1>
+						    <h1 class="page-title">
 							    <?php single_cat_title(); ?>
 					    	</h1>
 
 					    	<!-- To see additional archive styles, visit the /partials directory -->
-					    	<?php get_template_part( 'partials/loop', 'archive-accordion' ); ?>
+					    	<?php get_template_part( 'partials/loop', 'publications' ); ?>
+
+
 
     				</div> <!-- end #main -->
 
