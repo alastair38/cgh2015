@@ -421,7 +421,7 @@ HOME PAGE
 .home article p {
     background: white;
     display: inline-block;
-    width: auto;
+    width: 100%;
     font-weight: 300;
     padding: 0.5em;
 
@@ -433,7 +433,7 @@ HOME PAGE
 
 .home article {
     height: auto;
-    padding: 6em 2em;
+    padding: 5em 1em 2em 1em;
     float: right;
 }
 
@@ -479,7 +479,7 @@ ul#categoryList {
         width: 100%;
         height: auto;
         margin: auto;
-        font-size: 1.25em;
+        font-size: 1em;
         text-align: center;
         text-transform: uppercase;
         background: $charcoal;
@@ -490,7 +490,7 @@ ul#categoryList {
         & a {
             display: block;
             height: 100%;
-            padding: 1em;
+            padding: 1.5em .25em;
             color: $white;
             transition: 500ms;
             &:hover,
@@ -500,14 +500,15 @@ ul#categoryList {
         }
     }
     span {
-        background: rgba(255,255,255,.75);
+        background: rgba(255,255,255,.85);
         display: inline-block;
         position: absolute;
         top: 0;
         left: 0;
         bottom: 0;
-        padding: 1em;
+        padding: 1em .5em;
         opacity: 0;
+        font-size: .65em;
         transition: 500ms;
         overflow: hidden;
     }

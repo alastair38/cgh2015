@@ -5583,8 +5583,8 @@ ul.off-canvas-list {
   box-shadow: 0 0 0 1px tomato, 0 7px 0 1px tomato, 0 14px 0 1px tomato;
   transition: 500ms; }
 
-ul#menu-main li a:hover,
-ul#menu-menu li a:focus {
+ul#menu-main-1 li a:hover,
+ul#menu-menu-1 li a:focus {
   background: #F9F9F9; }
 
 a.exit-off-canvas span {

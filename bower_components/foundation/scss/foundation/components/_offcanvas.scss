@@ -333,8 +333,8 @@ $menu-slide: "transform 500ms ease" !default;
         transition: 500ms;
       }
 
-    ul#menu-main li a:hover,
-    ul#menu-menu li a:focus {
+    ul#menu-main-1 li a:hover,
+    ul#menu-menu-1 li a:focus {
         background: $snow;
     }
 

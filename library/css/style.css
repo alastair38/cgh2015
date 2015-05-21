@@ -6023,8 +6023,8 @@ ul.off-canvas-list {
   box-shadow: 0 0 0 1px tomato, 0 7px 0 1px tomato, 0 14px 0 1px tomato;
   transition: 500ms; }
 
-ul#menu-main li a:hover,
-ul#menu-menu li a:focus {
+ul#menu-main-1 li a:hover,
+ul#menu-menu-1 li a:focus {
   background: #F9F9F9; }
 
 a.exit-off-canvas span {
@@ -7201,7 +7201,7 @@ HOME PAGE
 .home article p {
   background: white;
   display: inline-block;
-  width: auto;
+  width: 100%;
   font-weight: 300;
   padding: 0.5em; }
 
@@ -7210,7 +7210,7 @@ HOME PAGE
 
 .home article {
   height: auto;
-  padding: 6em 2em;
+  padding: 5em 1em 2em 1em;
   float: right; }
 
 ul#categoryList {
@@ -7247,7 +7247,7 @@ ul#categoryList {
     width: 100%;
     height: auto;
     margin: auto;
-    font-size: 1.25em;
+    font-size: 1em;
     text-align: center;
     text-transform: uppercase;
     background: #555555; }
@@ -7259,7 +7259,7 @@ ul#categoryList {
     #featuredPage h4 a {
       display: block;
       height: 100%;
-      padding: 1em;
+      padding: 1.5em .25em;
       color: #FFFFFF;
       transition: 500ms; }
       #latestContainer h4 a:hover, #latestContainer h4 a:focus,
@@ -7268,14 +7268,15 @@ ul#categoryList {
         background: #006080; }
   #latestContainer span,
   #featuredPage span {
-    background: rgba(255, 255, 255, 0.75);
+    background: rgba(255, 255, 255, 0.85);
     display: inline-block;
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
-    padding: 1em;
+    padding: 1em .5em;
     opacity: 0;
+    font-size: .65em;
     transition: 500ms;
     overflow: hidden; }
   #latestContainer p,
@@ -7732,6 +7733,38 @@ MEDIUM
   NAVIGATION STYLES
   *********************/
   /*********************
+  HOME PAGE STYLES
+  *********************/
+  .home article p {
+    width: auto; }
+
+  .home article {
+    padding: 6em 2em; }
+
+  #latestPosts {
+    padding: 0em 3em; }
+    #latestPosts h3 {
+      color: #555555;
+      text-align: center;
+      margin: 0em 0em 1em 0em;
+      font-weight: 400;
+      text-transform: uppercase; }
+
+  #latestContainer,
+  #featuredPage {
+    height: 200px; }
+    #latestContainer h4,
+    #featuredPage h4 {
+      width: 50%;
+      height: 100%;
+      float: left; }
+    #latestContainer p,
+    #featuredPage p {
+      width: 50%;
+      height: 100%;
+      float: left; }
+
+  /*********************
   POSTS & CONTENT STYLES
   *********************/
   /* entry content */
@@ -7812,12 +7845,17 @@ you can add resource intensive styles.
     #featuredPage h4 {
       width: 35%;
       height: 100%;
-      float: left; }
+      float: left;
+      font-size: 1.25em; }
     #latestContainer p,
     #featuredPage p {
       width: 65%;
       height: 100%;
       float: left; }
+      #latestContainer p span,
+      #featuredPage p span {
+        font-size: 1em;
+        font-weight: 300; }
 
   /*********************
   HEADER STYLES

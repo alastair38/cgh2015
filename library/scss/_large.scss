@@ -40,14 +40,21 @@ LAYOUT & GRID STYLES
         width: 35%;
         height: 100%;
         float: left;
+        font-size: 1.25em;
     }
     & p {
         width: 65%;
         height: 100%;
         float: left;
+        & span {
+            font-size: 1em;
+            font-weight: 300;
+        }
 
     }
 }
+
+
 
 /*********************
 HEADER STYLES

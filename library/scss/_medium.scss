@@ -12,6 +12,47 @@ NAVIGATION STYLES
 *********************/
 
 
+/*********************
+HOME PAGE STYLES
+*********************/
+
+.home article p {
+    width: auto;
+}
+
+.home article {
+    padding: 6em 2em;
+}
+
+
+#latestPosts {
+    padding: 0em 3em;
+    & h3 {
+        color: $charcoal;
+        text-align: center;
+        margin: 0em 0em 1em 0em;
+        font-weight: 400;
+        text-transform: uppercase;
+
+    }
+}
+
+#latestContainer,
+#featuredPage {
+    height: 200px;
+    & h4 {
+        width: 50%;
+        height: 100%;
+        float: left;
+    }
+    & p {
+        width: 50%;
+        height: 100%;
+        float: left;
+
+    }
+}
+
 
 /*********************
 POSTS & CONTENT STYLES

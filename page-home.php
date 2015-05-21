@@ -29,7 +29,7 @@ Template Name: Home (No Sidebar)
                   );
                 $categories = get_categories($args);
                   foreach($categories as $category) {
-                    echo '<li class="large-3 medium-3 small-12 columns"><a href="' . get_category_link( $category->term_id ) . '" aria-label="Follow link to view ' . $category->count . ' posts in ' . $category->name . '" title="' . sprintf( __( "View " . $category->count . " post(s) in %s" ), $category->name ) . '" ' . '>' . $category->name .'</a></li>';
+                    echo '<li class="large-3 medium-6 small-12 columns"><a href="' . get_category_link( $category->term_id ) . '" aria-label="Follow link to view ' . $category->count . ' posts in ' . $category->name . '" title="' . sprintf( __( "View " . $category->count . " post(s) in %s" ), $category->name ) . '" ' . '>' . $category->name .'</a></li>';
                     }
                 ?>
 
