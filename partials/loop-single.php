@@ -16,6 +16,8 @@
 <div id="sidebar1" class="sidebar large-3 medium-3 columns" role="complementary">
 <?php the_post_thumbnail('full'); ?>
 
+    <?php get_template_part( 'partials/content', 'share' ); ?>
+
                 <?php if( get_field('publication') ): ?>
                 <p><label>Publication</label><?php echo esc_html (get_field('publication')); ?></p>
                 <?php endif; ?>

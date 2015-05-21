@@ -212,6 +212,17 @@ function add_search_form_to_menu($items, $args) {
 	// On main menu: put styling around search and append it to the menu items
 	return $items . '<li id="my-nav-menu-search">' . get_search_form(false) . '</li>';
 }
+
+    add_filter('wp_nav_menu_items', 'add_search_form_offcanvas_menu', 10, 2);
+function add_search_form_offcanvas_menu($items, $args) {
+
+	// If this isn't the main navbar menu, do nothing
+	if( !($args->theme_location == 'main-nav') )
+		return $items;
+
+	// On main menu: put styling around search and append it to the menu items
+	return $items . '<li id="off-canvas-search">' . get_search_form(false) . '</li>';
+}
 	
 
 } /* end joints theme support */

@@ -361,6 +361,10 @@ ul#menu-top-bar input#s{
     }
 }
 
+li#off-canvas-search {
+    margin: 0 12px;
+}
+
 
 h3.site-title{
     float: left;
@@ -1184,6 +1188,28 @@ ul#sidebarLinks {
 	.widgettitle {
 		color: #fff;
 	}	
+}
+
+/*********************
+SHARE LINK STYLES
+*********************/
+
+#main ul.share-links.columns {
+  list-style-type: none;
+  margin: 1em 0;
+    & li {
+  display: inline-block;
+  padding: .5em .2em;
+  width: 30px;
+  height: 30px;
+  line-height: 0;
+  text-align: center;
+  background: $contrast-color;
+  border-radius: 50%;
+    }
+    & a {
+      color: $charcoal;
+    }
 }
 /*********************
 FOOTER STYLES

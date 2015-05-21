@@ -5627,6 +5627,11 @@ a {
   padding-bottom: 3px;
   border-bottom: 2px solid #444; }
 
+#sidebar1 ul.share-links li a:focus,
+#sidebar1 ul.share-links li a:hover {
+  border-bottom: 0px solid !important;
+  color: #006080 !important; }
+
 /* Default paragraph styles */
 p {
   font-family: inherit;
@@ -6015,20 +6020,31 @@ ul.off-canvas-list {
       background: #b3b3b3; }
 
 .tab-bar .menu-icon:focus span:after {
-  box-shadow: 0 0 0 1px tomato, 0 7px 0 1px tomato, 0 14px 0 1px tomato; }
+  box-shadow: 0 0 0 1px tomato, 0 7px 0 1px tomato, 0 14px 0 1px tomato;
+  transition: 500ms; }
 
-ul#menu-the-main-menu li a:hover,
-ul#menu-the-main-menu li a:focus {
+ul#menu-main li a:hover,
+ul#menu-menu li a:focus {
   background: #F9F9F9; }
 
 a.exit-off-canvas span {
-  display: none; }
-
-a.exit-off-canvas:focus span {
   display: inline-block;
-  padding: 10px;
-  background: tomato;
-  color: #FFFFFF; }
+  position: absolute;
+  width: 4em;
+  height: 4em;
+  background: #FFFFFF;
+  color: #555555;
+  transition: 500ms; }
+
+a.exit-off-canvas:focus span,
+a.exit-off-canvas:hover span {
+  color: tomato;
+  transition: 500ms; }
+
+i.fi-x-circle {
+  font-size: 2.5em;
+  padding-left: 0.5em;
+  transition: 500ms; }
 
 .move-right > .inner-wrap {
   -ms-transform: translate(15.625rem, 0);
@@ -7144,6 +7160,9 @@ ul#menu-top-bar input#s {
     top: 0;
     height: 100%; }
 
+li#off-canvas-search {
+  margin: 0 12px; }
+
 h3.site-title {
   float: left;
   width: auto;
@@ -7649,6 +7668,24 @@ ul#sidebarLinks {
 
 #sidebar-offcanvas .widgettitle {
   color: #fff; }
+
+/*********************
+SHARE LINK STYLES
+*********************/
+#main ul.share-links.columns {
+  list-style-type: none;
+  margin: 1em 0; }
+  #main ul.share-links.columns li {
+    display: inline-block;
+    padding: .5em .2em;
+    width: 30px;
+    height: 30px;
+    line-height: 0;
+    text-align: center;
+    background: #f2f071;
+    border-radius: 50%; }
+  #main ul.share-links.columns a {
+    color: #555555; }
 
 /*********************
 FOOTER STYLES

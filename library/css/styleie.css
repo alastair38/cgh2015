@@ -1,9 +1,30 @@
+.lt-ie9 #off-canvas-search {
+    position: absolute;
+    right: -125px;
+    width: 100px;
+}
+
+.lt-ie9 #featuredPage,
+.lt-ie9 #latestContainer {
+    height: 200px;
+}
+
+.lt-ie9 .category article img {
+    width: 125px;
+    height: 125px;
+}
+
+.lt-ie9 .category article h2 a {
+    height: 125px;
+}
+
+
+.lt-ie9 .sidebar img {
+    height: 175px;
+}
+
 .lt-ie9 .top-bar {
-  background: #ffffff;
-  *zoom: 1;
-  overflow: visible;
-  height: 50px;
-  width: 100%;
+
 }
 
 .lt-ie9 .menu-item a {
@@ -13,11 +34,6 @@
 .lt-ie9 .reveal-modal {
   height:;
   padding: 150px;
-}
-
-.lt-ie9 p {
-    padding-top: 1em;
-    padding-bottom: 1em;
 }
 
 .lt-ie9 .blog article {
@@ -74,7 +90,8 @@
 }
 
 .lt-ie9 .left-off-canvas-menu,
-.lt-ie9 .right-off-canvas-menu{
+.lt-ie9 .right-off-canvas-menu,
+.lt-ie9 .tags {
   display: none;
 }
 
@@ -98,7 +115,13 @@
 .lt-ie9 .top-bar.expanded { background: #111111; }
 .lt-ie9 .contain-to-grid .top-bar {
   max-width: 57.5em;
-  margin: 0 auto;
+  margin: 10px auto;
+   background: #ffffff;
+  *zoom: 1;
+  overflow: visible;
+  height: 50px;
+  width: 100%;
+  margin-top: 10px;
 }
 .lt-ie9 .top-bar-section {
   -webkit-transition: none 0 0;
@@ -209,7 +232,19 @@
 .lt-ie9 .row .large-5 { width: 41.66667%; }
 
 .lt-ie9 .large-6,
-.lt-ie9 .row .large-6 { width: 50%; }
+.lt-ie9 .row .large-6
+{ width: 50%; }
+
+.lt-ie9 #latestPosts h4 {
+    width: 35%;
+    float: left;
+}
+
+.lt-ie9 #latestPosts p {
+    width: 65%;
+    height: 200px;
+    float: left;
+}
 
 .lt-ie9 .large-7,
 .lt-ie9 .row .large-7 { width: 58.33333%; }
@@ -267,25 +302,42 @@
 .lt-ie9 .home #main {height: 450px;
 }
 
-.lt-ie9 #latestContainer span,
-.lt-ie9 #latestPosts span {
-   display: none;
+
+.lt-ie9 #latestContainer h4,
+.lt-ie9 #featuredPage h4 {
+   height: 200px;
+
 }
 
+.lt-ie9 #latestContainer h4 a,
+.lt-ie9 #featuredPage h4 a {
+     height: 200px;
+}
+
+
 .lt-ie9 .tab-bar h3,
-.lt-ie9 #scrollAlert {
+.lt-ie9 #scrollAlert,
+.lt-ie9 .exit-off-canvas,
+.lt-ie9 .left-off-canvas-menu,
+.lt-ie9 #latestContainer span,
+.lt-ie9 #latestPosts span,
+.lt-ie9 .tab-bar,
+.lt-ie9 h1.title,
+.lt-ie9 h1.title-mob,
+.lt-ie9 .category .entry-content
+{
     display: none;
 }
 
 .lt-ie9 h3.site-title {
-    padding-top: 10px;
+    font-size:28px;
 }
 
 .lt-ie9 .home article p {
     margin-bottom: 1em;
 }
 
-.lt-ie9 .home .large-6 {
+.lt-ie9 .home article.large-6 {
     float: right;
     padding-top: 3em;
 }
@@ -294,19 +346,17 @@
     color: #000000;
 }
 
-.lt-ie9 h1.title,
-.lt-ie9 h1.title-mob
-{display: none; }
-
+.lt-ie9 .page-title,
+.lt-ie9 .single-title {
+    font-size: 30px;
+}
 
 .lt-ie9 .scrollToTop {
-
 width: 0;
 height: 0;
 border-style: solid;
 border-width: 0 20px 20px 20px;
 border-color: transparent transparent #999999 transparent;
-
 }
 
 

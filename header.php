@@ -1,5 +1,6 @@
 <!doctype html>
-   <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+   <!--[if lt IE 10]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+
   <html class="no-js"  <?php language_attributes(); ?>>
 
 	<head>
@@ -32,7 +33,7 @@
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
 
-        <!--[if lt IE 9]>
+        <!--[if lt IE 10]>
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/library/css/styleie.css" />
 	 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
@@ -65,6 +66,10 @@
 							
 							 <!-- This navs will be applied to the main, under the logo 
 								  To see additional nav styles, visit the /partials directory -->
+
+                            <!--[if lt IE 10]>
+
+                            <![endif]-->
 								  
 							 <?php get_template_part( 'partials/nav', 'main-offcanvas' ); ?>
 

@@ -1,16 +1,20 @@
+<?php
+/*
+Template Name: Standard Page
+*/
+?>
+
 <?php get_header(); ?>
 			
 			<div id="content">
 			
 				<div id="inner-content" class="row">
 			
-				    <div id="main" class="large-8 medium-8 columns" role="main">
+				    <div id="main" class="large-12 medium-12 columns" role="main">
 					
 					    	<?php get_template_part( 'partials/loop', 'page' ); ?>
 					    					
     				</div> <!-- end #main -->
-    
-				    <?php get_sidebar(); ?>
 				    
 				</div> <!-- end #inner-content -->
     
