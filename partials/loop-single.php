@@ -7,7 +7,7 @@
 					
     <section class="entry-content large-9 medium-9 small-12 columns" itemprop="articleBody">
         <?php if( get_field('publication') ): ?>
-        <p><?php echo esc_html (get_field('publication')); ?></p>
+        <p><?php echo wp_kses (get_field('publication'), array('br' => array(),'em' => array(),'strong' => array())); ?></p>
         <?php endif; ?>
         <?php if( get_field('document') ): ?>
         <p id="download" aria-hidden="true">Download the publication <a href="<?php the_field( 'document' ); ?>" target="_blank" title="Download <?php the_title(); ?>" aria-label="Download <?php the_title(); ?>"><i class="fi-download"></i></a></p>

@@ -6,7 +6,8 @@
     <h5><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
     <article>
                 <?php if( get_field('publication') ): ?>
-                <p><?php echo esc_html (get_field('publication')); ?></p>
+
+                <p><?php echo wp_kses (get_field('publication'), array('br' => array(),'em' => array(),'strong' => array())); ?></p>
                 <?php endif; ?>
 
     </article> <!-- end article section -->
