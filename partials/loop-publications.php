@@ -28,7 +28,7 @@
     <article>
 
                 <?php if( get_field('publication') ): ?>
-                <p><?php echo esc_html (get_field('publication')); ?></p>
+                <p><?php echo wp_kses (get_field('publication'), array('br' => array(),'em' => array(),'strong' => array())); ?></p>
                 <?php endif; ?>
 
      </article><!-- end content section -->
