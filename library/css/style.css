@@ -7355,6 +7355,9 @@ PUBLICATIONS + ACCORDION STYLES
   font-weight: bold;
   padding-right: 5px; }
 
+#download {
+  font-weight: bold; }
+
 .accordion .accordion-navigation .content {
   display: block;
   max-height: 0;
@@ -7769,6 +7772,9 @@ MEDIUM
       height: 100%;
       float: left; }
 
+  #categoryList.medium-block-grid-2 > li:last-of-type {
+    margin-left: 25%; }
+
   /*********************
   POSTS & CONTENT STYLES
   *********************/
@@ -7861,6 +7867,9 @@ you can add resource intensive styles.
       #featuredPage p span {
         font-size: 1em;
         font-weight: 300; }
+
+  #categoryList.medium-block-grid-2 > li:last-of-type {
+    margin-left: 0%; }
 
   /*********************
   HEADER STYLES

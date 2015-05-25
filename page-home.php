@@ -18,7 +18,18 @@ Template Name: Home (No Sidebar)
 
 				</div> <!-- end #inner-content -->
 
-                <ul id="categoryList" class="columns">
+                <ul id="categoryList" class="small-block-grid-1 medium-block-grid-2 large-block-grid-5 columns">
+
+
+                <?php
+                $page = get_page_by_title( 'Links' );
+                $title = $page->post_title;
+                ?>
+
+
+                    <li><a href="<?php echo get_the_permalink($page->ID); ?>"><?php echo $title;?></a></li>
+
+
 
                 <?php
                 $args = array(
@@ -29,7 +40,7 @@ Template Name: Home (No Sidebar)
                   );
                 $categories = get_categories($args);
                   foreach($categories as $category) {
-                    echo '<li class="large-3 medium-6 small-12 columns"><a href="' . get_category_link( $category->term_id ) . '" aria-label="Follow link to view ' . $category->count . ' posts in ' . $category->name . '" title="' . sprintf( __( "View " . $category->count . " post(s) in %s" ), $category->name ) . '" ' . '>' . $category->name .'</a></li>';
+                    echo '<li><a href="' . get_category_link( $category->term_id ) . '" aria-label="Follow link to view ' . $category->count . ' posts in ' . $category->name . '" title="' . sprintf( __( "View " . $category->count . " post(s) in %s" ), $category->name ) . '" ' . '>' . $category->name .'</a></li>';
                     }
                 ?>
 
