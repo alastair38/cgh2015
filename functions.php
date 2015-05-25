@@ -9,6 +9,7 @@ require_once(get_template_directory().'/library/joints.php');
 
 // USE THIS TEMPLATE TO CREATE CUSTOM POST TYPES EASILY
 
+define( 'ACF_LITE', true );
 
 include_once(get_template_directory().'/bower_components/acf/acf.php' );
 

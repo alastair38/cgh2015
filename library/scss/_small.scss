@@ -596,10 +596,17 @@ PUBLICATIONS + ACCORDION STYLES
 
 #publications {
     & h5 {
-        background: $charcoal;
-        color: $white;
-        padding: 5px;
         text-align: center;
+    & a {
+        display: block;
+        width: 100%;
+        color: white;
+        background: $charcoal;
+        padding: 5px;
+    &:hover {
+        background: $primary-color;
+    }
+    }
     }
     & article {
         background: $white;

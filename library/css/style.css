@@ -7340,10 +7340,15 @@ i.fi-bookmark {
 PUBLICATIONS + ACCORDION STYLES
 *********************/
 #publications h5 {
-  background: #555555;
-  color: #FFFFFF;
-  padding: 5px;
   text-align: center; }
+  #publications h5 a {
+    display: block;
+    width: 100%;
+    color: white;
+    background: #555555;
+    padding: 5px; }
+    #publications h5 a:hover {
+      background: #006080; }
 #publications article {
   background: #FFFFFF; }
 #publications span {

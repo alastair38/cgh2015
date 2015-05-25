@@ -3,12 +3,11 @@
 <h3 class="sub-title">Books</h3>
  <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
 
-    <h5> <?php the_title(); ?></h5>
+    <h5><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
     <article>
-                <p><span>Details:</span>
-                <?php $content = get_the_content();
-                echo wp_kses($content, null); ?>
-                </p>
+                <?php if( get_field('publication') ): ?>
+                <p><span>Publication:</span><?php echo esc_html (get_field('publication')); ?></p>
+                <?php endif; ?>
 
                 <?php if( get_field('publisher') ): ?>
                 <p><span>Publisher:</span><?php echo esc_html (get_field('publisher')); ?></p>
@@ -37,16 +36,11 @@
 <h3 class="sub-title">Articles</h3>
  <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
 
-<h5> <?php the_title(); ?></h5>
+<h5><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
     <article>
 
-                <p><span>Details:</span>
-                <?php $content = get_the_content();
-                echo wp_kses($content, null); ?>
-                </p>
-
                 <?php if( get_field('publication') ): ?>
-                <p><span>Publisher:</span><?php echo esc_html (get_field('publication')); ?></p>
+                <p><span>Publication:</span><?php echo esc_html (get_field('publication')); ?></p>
                 <?php endif; ?>
 
                 <?php if( get_field('publisher') ): ?>

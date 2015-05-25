@@ -6,6 +6,9 @@
     </header> <!-- end article header -->
 					
     <section class="entry-content large-9 columns" itemprop="articleBody">
+        <?php if( get_field('publication') ): ?>
+        <p><label>Publication</label><?php echo esc_html (get_field('publication')); ?></p>
+        <?php endif; ?>
 
 		<?php the_content(); ?>
 	</section> <!-- end article section -->
@@ -17,10 +20,6 @@
 <?php the_post_thumbnail('full'); ?>
 
     <?php get_template_part( 'partials/content', 'share' ); ?>
-
-                <?php if( get_field('publication') ): ?>
-                <p><label>Publication</label><?php echo esc_html (get_field('publication')); ?></p>
-                <?php endif; ?>
 
                 <?php if( get_field('publisher') ): ?>
                 <p><label>Publisher</label><?php echo esc_html (get_field('publisher')); ?></p>
