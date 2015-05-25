@@ -7014,7 +7014,7 @@ style a page via class
   width: 100%; }
 
 #cookie-bar.fixed.bottom {
-  bottom: 0;
+  bottom: 15px;
   top: auto; }
 
 #cookie-bar p {
@@ -7164,7 +7164,7 @@ li#off-canvas-search {
   margin: 0 12px; }
 
 h3.site-title {
-  float: left;
+  float: none;
   width: auto;
   font-size: 1em; }
   h3.site-title a {
@@ -7740,6 +7740,9 @@ MEDIUM
   /*********************
   NAVIGATION STYLES
   *********************/
+  h3.site-title {
+    float: left; }
+
   /*********************
   HOME PAGE STYLES
   *********************/
