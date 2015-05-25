@@ -7001,20 +7001,20 @@ style a page via class
 /* Cookie Bar */
 #cookie-bar {
   background: #111111;
-  height: 24px;
-  line-height: 24px;
+  height: 40px;
+  line-height: 40px;
   color: #eeeeee;
   text-align: center;
   padding: 3px 0; }
 
 #cookie-bar.fixed {
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%; }
 
 #cookie-bar.fixed.bottom {
-  bottom: 15px;
+  bottom: 0px;
   top: auto; }
 
 #cookie-bar p {
