@@ -13,7 +13,7 @@
         <p id="download" aria-hidden="true">Download the publication <a href="<?php the_field( 'document' ); ?>" target="_blank" title="Download <?php the_title(); ?>" aria-label="Download <?php the_title(); ?>"><i class="fi-download"></i></a></p>
                 <?php endif; ?>
 
-		<?php the_content(); ?>
+		<div id="articleContent"><?php the_content(); ?></div>
 	</section> <!-- end article section -->
 						
 	<footer class="article-footer">

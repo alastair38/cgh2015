@@ -7380,6 +7380,9 @@ POSTS & CONTENT STYLES
 #content #inner-content {
   padding: 4em 0em; }
 
+#articleContent {
+  text-align: justify; }
+
 /* end .hentry */
 .single-title {
   border-bottom: 5px solid #f2f071; }

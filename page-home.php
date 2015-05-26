@@ -20,20 +20,9 @@ Template Name: Home (No Sidebar)
 
                 <ul id="categoryList" class="small-block-grid-1 medium-block-grid-2 large-block-grid-5 columns">
 
-
-                <?php
-                $page = get_page_by_title( 'Links' );
-                $title = $page->post_title;
-                ?>
-
-
-                    <li><a href="<?php echo get_the_permalink($page->ID); ?>"><?php echo $title;?></a></li>
-
-
-
                 <?php
                 $args = array(
-                  'orderby' => 'name',
+                  'orderby' => 'id',
                   'order' => 'ASC',
                   'hide_empty' => 0,
                   'parent' => 0
@@ -43,6 +32,13 @@ Template Name: Home (No Sidebar)
                     echo '<li><a href="' . get_category_link( $category->term_id ) . '" aria-label="Follow link to view ' . $category->count . ' posts in ' . $category->name . '" title="' . sprintf( __( "View " . $category->count . " post(s) in %s" ), $category->name ) . '" ' . '>' . $category->name .'</a></li>';
                     }
                 ?>
+
+                <?php
+                $page = get_page_by_title( 'Links' );
+                $title = $page->post_title;
+                ?>
+
+                <li><a href="<?php echo get_the_permalink($page->ID); ?>"><?php echo $title;?></a></li>
 
                 </ul>
 
