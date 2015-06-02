@@ -347,7 +347,7 @@ ul#menu-top-bar input#s{
     position:absolute;
     top: 1em;
     right: 0;
-    width: 80px;
+    width: 75px;
     border: 1px solid $ghost;
     -webkit-box-shadow:    none;
     -moz-box-shadow:       none;
@@ -597,6 +597,10 @@ PUBLICATIONS + ACCORDION STYLES
 #publications {
     & h5 {
         text-align: center;
+        & span {
+            display: block;
+            font-weight: 300;
+        }
     & a {
         display: block;
         width: 100%;

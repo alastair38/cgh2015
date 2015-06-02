@@ -8,7 +8,9 @@ $lastposts = get_posts( $args ); ?>
 <?php
 foreach($lastposts as $post) : setup_postdata($post); ?>
     <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
-    $title = get_the_title();
+    $maintitle = get_the_title();
+    $subtitle =  get_field('sub_headline');
+    $title = $maintitle . ' ' . $subtitle;
     $trimmed_title = wp_trim_words( $title, 8, '...' );
     ?>
 	<h4><a href="<?php the_permalink(); ?>"><?php echo $trimmed_title; ?></a></h4>

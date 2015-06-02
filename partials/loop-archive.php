@@ -25,7 +25,7 @@
         <?php if ( has_post_thumbnail() ) {
         the_post_thumbnail('large');
         } else { ?>
-        <img src="<?php echo get_template_directory_uri(); ?>/library/images/default_thumb.png" alt="<?php the_title(); ?>" />
+        <img src="<?php echo get_template_directory_uri(); ?>/library/images/default.jpg" alt="<?php the_title(); ?>" />
         <?php } ?>
         </div>
 	</article> <!-- end article -->

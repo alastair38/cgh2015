@@ -2,7 +2,11 @@
 
  <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-    <h5><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
+    <h5><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?>
+    <?php if( get_field('sub_headline') ): ?>
+    <span><?php echo wp_kses (get_field('sub_headline'), array('br' => array(),'em' => array(),'strong' => array())); ?></span>
+    <?php endif; ?>
+    </a></h5>
     <article>
                 <?php if( get_field('publication') ): ?>
                 <p><?php echo wp_kses (get_field('publication'), array('br' => array(),'em' => array(),'strong' => array())); ?></p>
