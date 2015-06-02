@@ -28,10 +28,11 @@
 <h3 class="sub-title">Articles</h3>
  <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
 
-<h5><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
-<?php if( get_field('sub_headline') ): ?>
-<span><?php echo wp_kses (get_field('sub_headline'), array('br' => array(),'em' => array(),'strong' => array())); ?></span>
-<?php endif; ?>
+    <h5><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?>
+    <?php if( get_field('sub_headline') ): ?>
+    <span><?php echo wp_kses (get_field('sub_headline'), array('br' => array(),'em' => array(),'strong' => array())); ?></span>
+    <?php endif; ?>
+    </a></h5>
     <article>
 
                 <?php if( get_field('publication') ): ?>
