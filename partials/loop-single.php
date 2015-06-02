@@ -1,7 +1,11 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 						
 	<header class="article-header">	
-		<h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
+		<h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?>
+        <?php if( get_field('sub_headline') ): ?>
+        <span><?php echo wp_kses (get_field('sub_headline'), array('br' => array(),'em' => array(),'strong' => array())); ?></span>
+        <?php endif; ?>
+        </h1>
 
     </header> <!-- end article header -->
 					

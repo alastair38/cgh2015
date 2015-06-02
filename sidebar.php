@@ -13,6 +13,12 @@
                     echo '<li><a href="' . get_category_link( $category->term_id ) . '" aria-label="Follow link to view ' . $category->count . ' posts in ' . $category->name . '" title="' . sprintf( __( "View " . $category->count . " post(s) in %s" ), $category->name ) . '" ' . '>' . $category->name .'</a></li>';
                     }
                 ?>
+        <?php
+                $page = get_page_by_title( 'Links' );
+                $title = $page->post_title;
+                ?>
+
+                <li><a href="<?php echo get_the_permalink($page->ID); ?>"><?php echo $title;?></a></li>
 
                 </ul>
 </div>

@@ -175,6 +175,45 @@ if(function_exists("register_field_group"))
 	));
 }
 
+if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_sub-heading',
+		'title' => 'Sub Heading',
+		'fields' => array (
+			array (
+				'key' => 'field_55698788eb3d4',
+				'label' => 'Text',
+				'name' => 'sub_headline',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => 'Enter any sub-headline here',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'post',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'acf_after_title',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+}
 
 
 

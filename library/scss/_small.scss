@@ -676,11 +676,15 @@ POSTS & CONTENT STYLES
 
 } /* end .hentry */
 
-.single-title,
-.page-title {}
+
 
 .single-title {
     border-bottom: 5px solid $contrast-color;
+    font-size: 2em;
+    margin-bottom: 1em;
+    span {
+        display: block;
+    }
 }
 
 .page-title {
@@ -692,7 +696,7 @@ POSTS & CONTENT STYLES
 
 .category {
     & article {
-        background: $snow;
+        background: transparent;
         height: auto;
         padding: 0;
         & .large-3,
@@ -701,8 +705,13 @@ POSTS & CONTENT STYLES
             padding: 0;
             & img {
                 width: 100%;
+                height: auto;
+                margin-top: 1em;
             }
         }
+    }
+    & .entry-content {
+
     }
     & .article-header {
     background:$primary-color;
@@ -713,7 +722,7 @@ POSTS & CONTENT STYLES
         & a {
             display: block;
             width: 100%;
-            height: 100%;
+            height: auto;
             color: $white;
             padding: .25em;
             transition: 500ms;

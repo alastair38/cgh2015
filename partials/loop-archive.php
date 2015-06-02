@@ -5,16 +5,8 @@
 
 	<article id="post-<?php the_ID(); ?>" class="columns" role="article">
 
-    <div class="large-3 medium-3 small-12 columns">
-        <?php if ( has_post_thumbnail() ) {
-        the_post_thumbnail();
-        } else { ?>
-        <img src="<?php echo get_template_directory_uri(); ?>/library/images/default_thumb.png" alt="<?php the_title(); ?>" />
-        <?php } ?>
 
-
-        </div>
-		<div class="large-9 medium-9 small-12 columns">
+		<div class="large-12 medium-9 small-12 columns">
 		<header class="article-header">
 			<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
 			</h2>
@@ -29,6 +21,13 @@
             <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">View Article</a>
 		</section> <!-- end article section -->
 		</div>
+        <div class="large-12 medium-3 small-12 columns">
+        <?php if ( has_post_thumbnail() ) {
+        the_post_thumbnail('large');
+        } else { ?>
+        <img src="<?php echo get_template_directory_uri(); ?>/library/images/default_thumb.png" alt="<?php the_title(); ?>" />
+        <?php } ?>
+        </div>
 	</article> <!-- end article -->
 
 <?php endwhile; ?>	

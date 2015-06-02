@@ -7385,14 +7385,18 @@ POSTS & CONTENT STYLES
 
 /* end .hentry */
 .single-title {
-  border-bottom: 5px solid #f2f071; }
+  border-bottom: 5px solid #f2f071;
+  font-size: 2em;
+  margin-bottom: 1em; }
+  .single-title span {
+    display: block; }
 
 .page-title {
   margin-bottom: 1em;
   border-bottom: 5px solid #f2f071; }
 
 .category article {
-  background: #F9F9F9;
+  background: transparent;
   height: auto;
   padding: 0; }
   .category article .large-3,
@@ -7402,7 +7406,9 @@ POSTS & CONTENT STYLES
     .category article .large-3 img,
     .category article .medium-3 img,
     .category article .small-12 img {
-      width: 100%; }
+      width: 100%;
+      height: auto;
+      margin-top: 1em; }
 .category .article-header {
   background: #006080; }
   .category .article-header h2 {
@@ -7412,7 +7418,7 @@ POSTS & CONTENT STYLES
     .category .article-header h2 a {
       display: block;
       width: 100%;
-      height: 100%;
+      height: auto;
       color: #FFFFFF;
       padding: .25em;
       transition: 500ms; }
