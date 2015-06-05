@@ -1,4 +1,4 @@
-<div id="publications" class="large-9 columns">
+<div id="publications" class="large-9 small-12 columns">
 <?php $query = new WP_Query( 'category_name=books' ); ?>
 <h3 class="sub-title">Books</h3>
  <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>

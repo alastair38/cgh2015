@@ -98,6 +98,47 @@ if(function_exists("register_field_group"))
 if(function_exists("register_field_group"))
 {
 	register_field_group(array (
+		'id' => 'acf_sub-heading',
+		'title' => 'Sub Heading',
+		'fields' => array (
+			array (
+				'key' => 'field_55698788eb3d4',
+				'label' => 'Text',
+				'name' => 'sub_headline',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => 'Enter any sub-headline here',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'post',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'acf_after_title',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+}
+
+
+if(function_exists("register_field_group"))
+{
+	register_field_group(array (
 		'id' => 'acf_add-attachment',
 		'title' => 'Add Attachment',
 		'fields' => array (
@@ -175,46 +216,97 @@ if(function_exists("register_field_group"))
 	));
 }
 
+
 if(function_exists("register_field_group"))
 {
 	register_field_group(array (
-		'id' => 'acf_sub-heading',
-		'title' => 'Sub Heading',
+		'id' => 'acf_photos',
+		'title' => 'Photos',
 		'fields' => array (
 			array (
-				'key' => 'field_55698788eb3d4',
-				'label' => 'Text',
-				'name' => 'sub_headline',
-				'type' => 'text',
-				'default_value' => '',
-				'placeholder' => 'Enter any sub-headline here',
-				'prepend' => '',
-				'append' => '',
-				'formatting' => 'none',
-				'maxlength' => '',
+				'key' => 'field_557159b37a18c',
+				'label' => 'First Image',
+				'name' => 'first_image',
+				'type' => 'image',
+				'save_format' => 'object',
+				'preview_size' => 'thumbnail',
+				'library' => 'all',
+			),
+			array (
+				'key' => 'field_55715a087a190',
+				'label' => 'Second Image',
+				'name' => 'second_image',
+				'type' => 'image',
+				'save_format' => 'object',
+				'preview_size' => 'thumbnail',
+				'library' => 'all',
+			),
+			array (
+				'key' => 'field_55715a157a191',
+				'label' => 'Third Image',
+				'name' => 'third_image',
+				'type' => 'image',
+				'save_format' => 'object',
+				'preview_size' => 'thumbnail',
+				'library' => 'all',
 			),
 		),
 		'location' => array (
 			array (
 				array (
-					'param' => 'post_type',
+					'param' => 'page_template',
 					'operator' => '==',
-					'value' => 'post',
+					'value' => 'page-home.php',
 					'order_no' => 0,
 					'group_no' => 0,
 				),
 			),
+			array (
+				array (
+					'param' => 'post_category',
+					'operator' => '==',
+					'value' => '1',
+					'order_no' => 0,
+					'group_no' => 1,
+				),
+			),
+			array (
+				array (
+					'param' => 'post_category',
+					'operator' => '==',
+					'value' => '3',
+					'order_no' => 0,
+					'group_no' => 2,
+				),
+			),
+			array (
+				array (
+					'param' => 'post_category',
+					'operator' => '==',
+					'value' => '4',
+					'order_no' => 0,
+					'group_no' => 3,
+				),
+			),
 		),
 		'options' => array (
-			'position' => 'acf_after_title',
+			'position' => 'normal',
 			'layout' => 'default',
 			'hide_on_screen' => array (
+				0 => 'permalink',
+				1 => 'excerpt',
+				2 => 'custom_fields',
+				3 => 'revisions',
+				4 => 'author',
+				5 => 'format',
+				6 => 'featured_image',
+				7 => 'tags',
+				8 => 'send-trackbacks',
 			),
 		),
 		'menu_order' => 0,
 	));
 }
-
 
 
 

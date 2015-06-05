@@ -23,6 +23,27 @@
     -webkit-tap-highlight-color: transparent;
 }
 
+
+.slider {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity .2s ease-in;
+            transition: opacity .2s ease-in;
+}
+
+.slider .slick {
+    position: absolute;
+    width: 100%;
+}
+
+.slider.slick-initialized {
+    position: relative;
+    opacity: 1;
+    -webkit-transition: opacity 0.2s ease-in;
+            transition: opacity 0.2s ease-in;
+}
+
+
 .slick-list
 {
     position: relative;
@@ -114,12 +135,6 @@
     height: auto;
 
     border: 1px solid transparent;
-}
-
-.slider-wrapper,
-.slider img {
-    position: relative;
-    width: 600px;
 }
 
 .slider-wrapper {

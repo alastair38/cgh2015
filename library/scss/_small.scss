@@ -399,7 +399,7 @@ h3.site-title{
 
 /*********************
 HOME PAGE
-*********************/
+
 
 .home img.attachment-full.wp-post-image {
     width: 100%;
@@ -412,6 +412,14 @@ HOME PAGE
     filter: hue-rotate(300deg);
     -webkit-filter: hue-rotate(300deg);
     transition: 2000ms;
+}
+*********************/
+
+#frontPagecontent {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0px;
 }
 
 .home #content #inner-content {
@@ -427,9 +435,12 @@ HOME PAGE
 
 }
 
+/*****
 .home #main {
     border-bottom: 2em solid $contrast-color;
 }
+
+****/
 
 .home article {
     height: auto;
@@ -533,6 +544,33 @@ ul#categoryList {
 
 
 /*********************
+HOME SLIDER
+*********************/
+.home .slider-wrapper,
+.home .slider,
+.home .slider div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.home .slider {
+     border-bottom: 2em solid #F2F071;
+}
+
+/*********************
+SINGLE SLIDER
+*********************/
+
+.single .slider-wrapper,
+.single .slider,
+.single .slider div {
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+/*********************
 FOOTER
 *********************/
 
@@ -573,7 +611,7 @@ ul.xoxo.blogroll {
     & li {
         list-style-type: none;
         padding: 1em 1em 1.5em 1em;
-        margin: 1.5em 0;
+        margin: 0 0 1.5em 0;
         background: $snow;
         border-bottom: 4px solid $charcoal;
         & a {
@@ -607,7 +645,8 @@ PUBLICATIONS + ACCORDION STYLES
         color: white;
         background: $charcoal;
         padding: 5px;
-    &:hover {
+    &:hover,
+    &:focus {
         background: $primary-color;
     }
     }
@@ -1168,6 +1207,10 @@ COMMENT FORM STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
+
+#linksContainer {
+    background: $ghost;
+}
 
 .single .sidebar {
     background: $ghost;

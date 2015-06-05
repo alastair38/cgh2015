@@ -1,4 +1,4 @@
-<div class="large-12 columns">
+<div id=linksContainer class="large-12 columns">
 	<ul id="sidebarLinks">
         <h3>Quick Links</h3>
                 <?php

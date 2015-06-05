@@ -3,8 +3,13 @@
 
     var popupSlide = $('.slider').slick({
         accessibility: true,
-        infinite: false,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
         dots: false,
+        speed: 1500,
+        fade: true,
+        slidesToShow: 1,
         prevArrow: '.prev',
         nextArrow: '.next'
     });

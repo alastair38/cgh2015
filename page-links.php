@@ -15,9 +15,13 @@ Template Name: Links (No Sidebar)
 						<?php get_template_part( 'partials/loop', 'page' ); ?>
 
 
-                        <ul class="xoxo blogroll">
+                        <ul class="large-9 columns xoxo blogroll">
                         <?php wp_list_bookmarks('categorize=0&link_after=<i class="fi-bookmark"></i>&title_li=&category_before=&category_after=&show_images=1&show_description=1'); ?>
 					   </ul>
+
+                        <div class="large-3 show-for-large-only columns">
+<?php get_sidebar(); ?>
+</div>
 
     				</div> <!-- end #main -->
 

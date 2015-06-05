@@ -7,9 +7,11 @@
 					<div id="main" class="large-12 medium-12 columns first" role="main">
 					
 					    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-					
-					    	<?php get_template_part( 'partials/loop', 'single' ); ?>
-					    					
+					<?php if( get_field('publication') ):
+                    get_template_part( 'partials/loop', 'single-publication' ); else :
+                    get_template_part( 'partials/loop', 'single' );
+                    endif; ?>
+
 					    <?php endwhile; else : ?>
 					
 					   		<?php get_template_part( 'partials/content', 'missing' ); ?>

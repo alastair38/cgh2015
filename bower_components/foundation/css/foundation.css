@@ -5183,9 +5183,23 @@ a {
 
 .article-header a:focus,
 .entry-content a:focus,
-#sidebar1 a:focus {
+#sidebar1 a:focus,
+#sidebarLinks a:focus,
+.article-header a:hover,
+.entry-content a:hover,
+#sidebar1 a:hover,
+#sidebarLinks a:hover {
   padding-bottom: 3px;
   border-bottom: 2px solid #444; }
+
+.off-canvas-list a:focus,
+.off-canvas-list a:hover {
+  background: #555555;
+  color: #FFFFFF; }
+
+.xoxo a:hover > .fi-bookmark,
+.xoxo a:focus > .fi-bookmark {
+  color: #f2f071; }
 
 #sidebar1 ul.share-links li a:focus,
 #sidebar1 ul.share-links li a:hover {

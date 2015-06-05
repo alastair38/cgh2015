@@ -5623,9 +5623,23 @@ a {
 
 .article-header a:focus,
 .entry-content a:focus,
-#sidebar1 a:focus {
+#sidebar1 a:focus,
+#sidebarLinks a:focus,
+.article-header a:hover,
+.entry-content a:hover,
+#sidebar1 a:hover,
+#sidebarLinks a:hover {
   padding-bottom: 3px;
   border-bottom: 2px solid #444; }
+
+.off-canvas-list a:focus,
+.off-canvas-list a:hover {
+  background: #555555;
+  color: #FFFFFF; }
+
+.xoxo a:hover > .fi-bookmark,
+.xoxo a:focus > .fi-bookmark {
+  color: #f2f071; }
 
 #sidebar1 ul.share-links li a:focus,
 #sidebar1 ul.share-links li a:hover {
@@ -7182,18 +7196,26 @@ h3.site-title {
 
 /*********************
 HOME PAGE
-*********************/
+
+
 .home img.attachment-full.wp-post-image {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0px;
+    z-index: -1;
+    filter: hue-rotate(300deg);
+    -webkit-filter: hue-rotate(300deg);
+    transition: 2000ms;
+}
+*********************/
+#frontPagecontent {
   position: absolute;
   left: 0;
   right: 0;
-  top: 0px;
-  z-index: -1;
-  filter: hue-rotate(300deg);
-  -webkit-filter: hue-rotate(300deg);
-  transition: 2000ms; }
+  top: 0px; }
 
 .home #content #inner-content {
   padding-top: 0.1em; }
@@ -7205,9 +7227,12 @@ HOME PAGE
   font-weight: 300;
   padding: 0.5em; }
 
+/*****
 .home #main {
-  border-bottom: 2em solid #f2f071; }
+    border-bottom: 2em solid $contrast-color;
+}
 
+****/
 .home article {
   height: auto;
   padding: 5em 1em 2em 1em;
@@ -7295,6 +7320,29 @@ ul#categoryList {
   border-bottom: 1px solid #555555; }
 
 /*********************
+HOME SLIDER
+*********************/
+.home .slider-wrapper,
+.home .slider,
+.home .slider div {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+
+.home .slider {
+  border-bottom: 2em solid #F2F071; }
+
+/*********************
+SINGLE SLIDER
+*********************/
+.single .slider-wrapper,
+.single .slider,
+.single .slider div {
+  position: relative;
+  width: 100%;
+  height: 200px; }
+
+/*********************
 FOOTER
 *********************/
 p.source-org.copyright {
@@ -7324,7 +7372,7 @@ ul.xoxo.blogroll {
   ul.xoxo.blogroll li {
     list-style-type: none;
     padding: 1em 1em 1.5em 1em;
-    margin: 1.5em 0;
+    margin: 0 0 1.5em 0;
     background: #F9F9F9;
     border-bottom: 4px solid #555555; }
     ul.xoxo.blogroll li a {
@@ -7350,7 +7398,7 @@ PUBLICATIONS + ACCORDION STYLES
     color: white;
     background: #555555;
     padding: 5px; }
-    #publications h5 a:hover {
+    #publications h5 a:hover, #publications h5 a:focus {
       background: #006080; }
 #publications article {
   background: #FFFFFF; }
@@ -7668,6 +7716,9 @@ COMMENT FORM STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
+#linksContainer {
+  background: #FAFAFA; }
+
 .single .sidebar {
   background: #FAFAFA;
   padding: 0;
@@ -7791,9 +7842,23 @@ MEDIUM
     margin-left: 25%; }
 
   /*********************
+  HOME SLIDER
+  *********************/
+  .home .slider-wrapper,
+  .home .slider img {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    border-bottom: 2em solid #F2F071;
+    clear: both; }
+
+  /*********************
   POSTS & CONTENT STYLES
   *********************/
   /* entry content */
+  .single .entry-content {
+    padding-left: 0; }
+
   .entry-content {
     /* at this larger size, we can start to align images */ }
     .entry-content .alignleft, .entry-content img.alignleft {
@@ -7811,6 +7876,12 @@ MEDIUM
       clear: both; }
 
   /* end .entry-content */
+  /*********************
+  LINKS PAGE
+  *********************/
+  ul.xoxo.blogroll {
+    padding-left: 0; }
+
   /*********************
   SIDEBARS & ASIDES
   *********************/
@@ -7917,6 +7988,9 @@ you can add resource intensive styles.
   ul#menu-top-bar {
     width: 30%; }
 
+  /*********************
+  HOME SLIDER
+  *********************/
   /*********************
   SIDEBARS & ASIDES
   *********************/

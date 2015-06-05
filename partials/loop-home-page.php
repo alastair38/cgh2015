@@ -1,6 +1,10 @@
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-<?php the_post_thumbnail('full'); ?>
+<div class="slider" id="frontPagecontent">
+      <?php get_template_part( 'partials/loop', 'slider' ); ?>
+</div>
+
+
 
 	<article id="post-<?php the_ID(); ?>"  class="large-6 medium-8 small-12 columns" role="article" itemscope itemtype="http://schema.org/WebPage">
 
