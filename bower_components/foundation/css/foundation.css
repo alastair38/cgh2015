@@ -5181,11 +5181,9 @@ a {
   a img {
     border: none; }
 
-.article-header a:focus,
 .entry-content a:focus,
 #sidebar1 a:focus,
 #sidebarLinks a:focus,
-.article-header a:hover,
 .entry-content a:hover,
 #sidebar1 a:hover,
 #sidebarLinks a:hover {

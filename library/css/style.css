@@ -5621,11 +5621,9 @@ a {
   a img {
     border: none; }
 
-.article-header a:focus,
 .entry-content a:focus,
 #sidebar1 a:focus,
 #sidebarLinks a:focus,
-.article-header a:hover,
 .entry-content a:hover,
 #sidebar1 a:hover,
 #sidebarLinks a:hover {
@@ -7449,7 +7447,8 @@ POSTS & CONTENT STYLES
 .category article {
   background: transparent;
   height: auto;
-  padding: 0; }
+  padding: 0;
+  margin-bottom: 2em; }
   .category article .large-3,
   .category article .medium-3,
   .category article .small-12 {
