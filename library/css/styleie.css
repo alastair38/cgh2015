@@ -1,3 +1,15 @@
+.lt-ie9 .fixed {
+    z-index: 1001;
+}
+
+.lt-ie9 ul#categoryList li {
+    width: 20%;
+}
+
+.lt-ie9 .slick-slide {
+    background-position: 100% 100%;
+}
+
 .lt-ie9 #off-canvas-search {
     position: absolute;
     right: -125px;
@@ -331,10 +343,19 @@
 
 .lt-ie9 h3.site-title {
     font-size:28px;
+    float: left;
 }
 
 .lt-ie9 .home article p {
     margin-bottom: 1em;
+}
+
+.lt-ie9 .home article {
+    margin-bottom: 1em;
+    position: absolute;
+    bottom: 20%;
+    right: 0;
+    z-index: 901;
 }
 
 .lt-ie9 .home article.large-6 {
