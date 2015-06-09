@@ -448,6 +448,10 @@ HOME PAGE
     float: right;
 }
 
+.home section.entry-content {
+    margin: 2em 0;
+}
+
 ul#categoryList {
     list-style-type: none;
     margin: 1em 0em;
@@ -556,6 +560,22 @@ HOME SLIDER
 
 .home .slider {
      border-bottom: 2em solid #F2F071;
+}
+
+.home .slider p {
+    position:absolute;
+    bottom: 0px;
+    left: 10px;
+    margin-right: 10px;
+    background: $white;
+    padding: 0 5px;
+    font-size: .85em;
+    a {
+       color: $charcoal;
+        &:hover {
+            color: $primary-color;
+        }
+    }
 }
 
 /*********************
