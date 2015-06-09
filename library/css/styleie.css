@@ -6,9 +6,6 @@
     width: 20%;
 }
 
-.lt-ie9 .slick-slide {
-    background-position: 100% 100%;
-}
 
 .lt-ie9 #off-canvas-search {
     position: absolute;
