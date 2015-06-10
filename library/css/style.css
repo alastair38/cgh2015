@@ -7877,6 +7877,9 @@ MEDIUM
   /*********************
   ABOUT PAGE
   *********************/
+  .entry-content img.alignleft {
+    max-width: 100%; }
+
   #profilePicture, #contactDetails {
     text-align: left; }
 
@@ -8030,6 +8033,9 @@ you can add resource intensive styles.
   /*********************
   ABOUT PAGE
   *********************/
+  .entry-content img.alignleft {
+    max-width: 100%; }
+
   #profilePicture, #contactDetails {
     text-align: left; }
 
