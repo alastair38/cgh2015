@@ -335,7 +335,8 @@ $menu-slide: "transform 500ms ease" !default;
 
     ul#menu-main-1 li a:hover,
     ul#menu-menu-1 li a:focus {
-        background: $snow;
+        background: $charcoal;
+        color: $white;
     }
 
     a.exit-off-canvas span {

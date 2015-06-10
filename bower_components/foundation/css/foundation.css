@@ -5597,7 +5597,8 @@ ul.off-canvas-list {
 
 ul#menu-main-1 li a:hover,
 ul#menu-menu-1 li a:focus {
-  background: #F9F9F9; }
+  background: #555555;
+  color: #FFFFFF; }
 
 a.exit-off-canvas span {
   display: inline-block;
