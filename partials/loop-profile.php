@@ -1,5 +1,5 @@
                     <div itemscope itemtype="http://schema.org/Person">
-                        <div class="large-3 medium-3 small-12 columns" id="profilePicture">
+                        <div class="small-12 columns" id="profilePicture">
                         <?php
 
                         $image = get_field('profile_picture');
@@ -10,7 +10,7 @@
 
                         <?php endif; ?>
                         </div>
-                        <div class="large-9 medium-9 small-12 columns" id="contactDetails">
+                        <div class="small-12 columns" id="contactDetails">
                         <?php if( get_field('name') ): ?>
                         <h3 itemprop="name"><?php echo esc_html (get_field('name')); ?></h3>
                         <?php endif; ?>

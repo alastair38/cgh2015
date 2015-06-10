@@ -237,7 +237,9 @@ $align-class-breakpoints:
     #sidebarLinks a:focus,
     .entry-content a:hover,
     #sidebar1 a:hover,
-    #sidebarLinks a:hover {
+    #sidebarLinks a:hover,
+    #contactDetails a:hover,
+    #contactDetails a:focus  {
         padding-bottom: 3px;
         border-bottom: 2px solid #444;
     }

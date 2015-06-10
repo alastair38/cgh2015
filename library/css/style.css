@@ -5626,7 +5626,9 @@ a {
 #sidebarLinks a:focus,
 .entry-content a:hover,
 #sidebar1 a:hover,
-#sidebarLinks a:hover {
+#sidebarLinks a:hover,
+#contactDetails a:hover,
+#contactDetails a:focus {
   padding-bottom: 3px;
   border-bottom: 2px solid #444; }
 
@@ -7880,9 +7882,6 @@ MEDIUM
   .entry-content img.alignleft {
     max-width: 100%; }
 
-  #profilePicture, #contactDetails {
-    text-align: left; }
-
   /*********************
   POSTS & CONTENT STYLES
   *********************/
@@ -8035,9 +8034,6 @@ you can add resource intensive styles.
   *********************/
   .entry-content img.alignleft {
     max-width: 100%; }
-
-  #profilePicture, #contactDetails {
-    text-align: left; }
 
   /*********************
   SIDEBARS & ASIDES
