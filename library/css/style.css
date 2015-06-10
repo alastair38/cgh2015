@@ -7880,7 +7880,7 @@ MEDIUM
   ABOUT PAGE
   *********************/
   .entry-content img.alignleft {
-    max-width: 100%; }
+    width: 30%; }
 
   /*********************
   POSTS & CONTENT STYLES
@@ -8033,7 +8033,7 @@ you can add resource intensive styles.
   ABOUT PAGE
   *********************/
   .entry-content img.alignleft {
-    max-width: 100%; }
+    width: 40%; }
 
   /*********************
   SIDEBARS & ASIDES
