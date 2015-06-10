@@ -16,7 +16,7 @@
                         <?php endif; ?>
                         <ul>
                          <li><?php if( get_field('email') ): ?>
-                         Email: <a href="mailto:<?php echo sanitize_email (get_field('email')) ?>" itemprop="email" aria-label="Hit enter to open your email client to contact David" target="_blank"><i class="fi-mail"></i></a>
+                         <a href="mailto:<?php echo sanitize_email (get_field('email')) ?>" itemprop="email" aria-label="Hit enter to open your email client to contact David" target="_blank">Email David</a>
                         <?php endif; ?>
                         </li>
                          <li itemprop="telephone"><?php if( get_field('phone_number') ): ?>

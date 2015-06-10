@@ -7100,11 +7100,6 @@ button.scrollToTop:hover, button.scrollToTop:focus {
   opacity: 0;
   transition: 500ms; }
 
-button.scrollToTop:focus + #scrollAlert,
-button.scrollToTop:hover + #scrollAlert {
-  opacity: 1;
-  z-index: 10; }
-
 /*********************
 LINK STYLES
 *********************/
@@ -7366,15 +7361,22 @@ p.source-org.copyright {
 /*********************
 ABOUT PAGE
 *********************/
-#profilePicture img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%; }
+.entry-content img.alignleft {
+  width: 100%; }
 
-#contactDetails ul {
-  margin-left: 0; }
-  #contactDetails ul li {
-    list-style-type: none; }
+#profilePicture {
+  text-align: center; }
+  #profilePicture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; }
+
+#contactDetails {
+  text-align: center; }
+  #contactDetails ul {
+    margin-left: 0; }
+    #contactDetails ul li {
+      list-style-type: none; }
 
 #cv {
   padding-top: 2em; }
@@ -7450,7 +7452,7 @@ POSTS & CONTENT STYLES
   text-align: justify; }
 
 article .alignnone {
-  margin-right: 1em; }
+  margin: 0em 1em 1em 0em; }
 
 /* end .hentry */
 .single-title {
@@ -7496,7 +7498,8 @@ article .alignnone {
         background: #555555; }
 .category .entry-content {
   height: auto;
-  padding: 10px 10px 0 10px; }
+  padding: 10px 10px 0 10px;
+  margin-bottom: 2em; }
   .category .entry-content p {
     font-size: 1.25em;
     font-weight: 300;
@@ -7872,6 +7875,12 @@ MEDIUM
     clear: both; }
 
   /*********************
+  ABOUT PAGE
+  *********************/
+  #profilePicture, #contactDetails {
+    text-align: left; }
+
+  /*********************
   POSTS & CONTENT STYLES
   *********************/
   /* entry content */
@@ -7939,6 +7948,14 @@ you can add resource intensive styles.
   /*********************
   GENERAL STYLES
   *********************/
+  /*********************
+  ACCESSIBILITY
+  *********************/
+  button.scrollToTop:focus + #scrollAlert,
+  button.scrollToTop:hover + #scrollAlert {
+    opacity: 1;
+    z-index: 10; }
+
   /*********************
   LAYOUT & GRID STYLES
   *********************/
@@ -8010,6 +8027,12 @@ you can add resource intensive styles.
   /*********************
   HOME SLIDER
   *********************/
+  /*********************
+  ABOUT PAGE
+  *********************/
+  #profilePicture, #contactDetails {
+    text-align: left; }
+
   /*********************
   SIDEBARS & ASIDES
   *********************/
