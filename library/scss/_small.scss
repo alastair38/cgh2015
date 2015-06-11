@@ -363,7 +363,8 @@ li#off-canvas-search {
 h3.site-title{
     float: none;
     width: auto;
-    font-size: 1em;
+    font-size: .7em;
+    font-family: 'Syncopate';
 
    & a {
        color: $oil;
@@ -421,20 +422,13 @@ HOME PAGE
 }
 
 .home article p {
-    background: white;
-    display: inline-block;
-    width: 100%;
-    font-weight: 300;
-    padding: 0.5em;
-
+    margin-bottom: .5em;
+    font-size: .8em;
+    &:first-of-type {
+        font-size: 1.15em;
+        font-weight: bold;
+    }
 }
-
-/*****
-.home #main {
-    border-bottom: 2em solid $contrast-color;
-}
-
-****/
 
 .home article {
     height: auto;
@@ -443,7 +437,10 @@ HOME PAGE
 }
 
 .home section.entry-content {
-    margin: 2em 0;
+    margin: 3.5em 0;
+    padding: 1em;
+    background: rgba(255,255,255,.9);
+    font-family: 'Syncopate';
 }
 
 ul#categoryList {

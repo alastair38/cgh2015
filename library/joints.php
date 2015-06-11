@@ -137,7 +137,7 @@ function joints_scripts_and_styles() {
     wp_enqueue_script( 'joints-js', get_template_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), $theme_version, true );
 
      // register google fonts stylesheet
-  wp_enqueue_style( 'google fonts', 'http://fonts.googleapis.com/css?family=Lato:100,300,400', array(), $theme_version, 'all' );
+  wp_enqueue_style( 'google fonts', 'http://fonts.googleapis.com/css?family=Lato:100,300,400|Syncopate', array(), $theme_version, 'all' );
    
     // register main stylesheet
     wp_enqueue_style( 'joints-stylesheet', get_template_directory_uri() . '/library/css/style.css', array(), $theme_version, 'all' );

@@ -215,8 +215,8 @@ $menu-slide: "transform 500ms ease" !default;
     right: 0;
   }
   &.middle {
-    left: $tabbar-icon-width;
-    right: $tabbar-icon-width;
+    left: 3rem;
+    right: 3rem;
   }
 }
 

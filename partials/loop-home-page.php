@@ -6,7 +6,7 @@
 
 
 
-	<article id="post-<?php the_ID(); ?>"  class="large-6 medium-8 small-12 columns" role="article" itemscope itemtype="http://schema.org/WebPage">
+	<article id="post-<?php the_ID(); ?>"  class="large-9 medium-9 small-12 columns" role="article" itemscope itemtype="http://schema.org/WebPage">
 
 		<header class="article-header">
 
