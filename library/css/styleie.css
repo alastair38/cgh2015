@@ -24,7 +24,7 @@
 }
 
 .lt-ie9 .category article h2 a {
-    height: 125px;
+    height: 100%;
 }
 
 
@@ -123,8 +123,8 @@
 }
 .lt-ie9 .top-bar.expanded { background: #111111; }
 .lt-ie9 .contain-to-grid .top-bar {
-  max-width: 57.5em;
-  margin: 10px auto;
+  max-width: 67.5em;
+  margin: 10px;
    background: #ffffff;
   *zoom: 1;
   overflow: visible;
@@ -309,9 +309,11 @@
 
 
 .lt-ie9 .home #main {height: 450px;
+    margin-top: 0;
 }
 
-
+.lt-ie9 .home .entry-content {background: white;
+}
 .lt-ie9 #latestContainer h4,
 .lt-ie9 #featuredPage h4 {
    height: 200px;
@@ -332,15 +334,16 @@
 .lt-ie9 #latestPosts span,
 .lt-ie9 .tab-bar,
 .lt-ie9 h1.title,
-.lt-ie9 h1.title-mob,
-.lt-ie9 .category .entry-content
+.lt-ie9 h1.title-mob
 {
     display: none;
 }
 
-.lt-ie9 h3.site-title {
-    font-size:28px;
+.lt-ie9 h1.site-title {
+    font-size:20px;
     float: left;
+    margin-top: 10px;
+    margin-right: 60px;
 }
 
 .lt-ie9 .home article p {

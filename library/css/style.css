@@ -7827,7 +7827,8 @@ MEDIUM
   *********************/
   h1.site-title {
     float: left;
-    font-size: .8em; }
+    font-size: .8em;
+    margin-left: .8em; }
 
   /*********************
   HOME PAGE STYLES
@@ -8005,6 +8006,7 @@ you can add resource intensive styles.
     width: auto;
     margin-top: 0;
     margin-bottom: 0;
+    margin-left: 1em;
     height: 100%;
     font-size: 1.3em;
     padding: 0;

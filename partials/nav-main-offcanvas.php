@@ -16,7 +16,7 @@
           <!--[if lt IE 10]>
         <nav class="top-bar" data-options="scrolltop:false; is_hover: true" role="navigation" data-topbar>
 			<section class="top-bar-section">
-				 <h3 class="site-title"><a href="<?php echo home_url(); ?>" rel="nofollow" tabindex="-1"><?php bloginfo('name'); ?></a></h3>
+				 <h1 class="site-title"><a href="<?php echo home_url(); ?>" rel="nofollow" tabindex="-1"><?php bloginfo('name'); ?></a></h1>
                  <?php joints_main_nav(); ?>
 			</section>
 
