@@ -4,7 +4,7 @@
 	<div class="fixed contain-to-grid">
 		<nav class="tab-bar" data-options="scrolltop:false; is_hover: true" role="navigation" data-tabbar>
 			<section class="middle tab-bar-section">
-				 <h3 class="site-title"><a href="<?php echo home_url(); ?>" rel="nofollow" tabindex="-1"><?php bloginfo('name'); ?></a></h3>
+				 <h1 class="site-title"><a href="<?php echo home_url(); ?>" rel="nofollow" tabindex="-1"><?php bloginfo('name'); ?></a></h1>
                  <span class="show-for-medium-up"><?php joints_top_nav(); ?></span>
 			</section>
 

@@ -11,7 +11,7 @@ Styles apply to 40.063em and up.
 NAVIGATION STYLES
 *********************/
 
-h3.site-title{
+h1.site-title{
     float: left;
     font-size: .8em;
 }
@@ -25,6 +25,10 @@ HOME PAGE STYLES
 
 .home article {
     padding: 6em 2em;
+}
+
+.home #main {
+    margin-top: 2em;
 }
 
 

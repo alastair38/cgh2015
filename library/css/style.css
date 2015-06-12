@@ -7173,12 +7173,12 @@ ul#menu-top-bar input#s {
 li#off-canvas-search {
   margin: 0 12px; }
 
-h3.site-title {
+h1.site-title {
   float: none;
   width: auto;
   font-size: .7em;
   font-family: 'Syncopate'; }
-  h3.site-title a {
+  h1.site-title a {
     color: #333333; }
 
 .off-canvas-list ul {
@@ -7825,7 +7825,7 @@ MEDIUM
   /*********************
   NAVIGATION STYLES
   *********************/
-  h3.site-title {
+  h1.site-title {
     float: left;
     font-size: .8em; }
 
@@ -7834,6 +7834,9 @@ MEDIUM
   *********************/
   .home article {
     padding: 6em 2em; }
+
+  .home #main {
+    margin-top: 2em; }
 
   #latestPosts {
     padding: 0em 3em; }
@@ -7970,7 +7973,7 @@ you can add resource intensive styles.
       text-transform: uppercase; }
 
   .home article p:first-of-type {
-    font-size: 1.25em; }
+    font-size: 1.35em; }
 
   #latestContainer,
   #featuredPage {
@@ -7997,17 +8000,17 @@ you can add resource intensive styles.
   /*********************
   HEADER STYLES
   *********************/
-  h3.site-title {
+  h1.site-title {
     float: left;
     width: auto;
     margin-top: 0;
     margin-bottom: 0;
     height: 100%;
-    font-size: 1.5em;
+    font-size: 1.3em;
     padding: 0;
     text-align: center;
     font-weight: bold; }
-    h3.site-title a {
+    h1.site-title a {
       color: #333333; }
 
   /*********************

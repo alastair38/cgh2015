@@ -46,7 +46,7 @@ LAYOUT & GRID STYLES
 
 .home article p {
     &:first-of-type {
-        font-size: 1.25em;
+        font-size: 1.35em;
     }
 }
 
@@ -84,13 +84,13 @@ HEADER STYLES
 
 	#logo {}
 
-h3.site-title{
+h1.site-title{
     float: left;
     width: auto;
     margin-top: 0;
     margin-bottom: 0;
     height: 100%;
-    font-size: 1.5em;
+    font-size: 1.3em;
     padding: 0;
     text-align: center;
     font-weight: bold;
