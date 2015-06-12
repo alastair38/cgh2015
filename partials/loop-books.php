@@ -1,4 +1,4 @@
-<div id="publications" class="large-9 columns">
+<div id="publications" class="large-9 medium-9 small-12 columns">
 
  <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -28,6 +28,6 @@
 <?php joints_page_navi(); ?>
 
 </div>
-<div class="large-3 show-for-large-only columns">
+<div class="large-3 medium-3 small-12 columns">
 <?php get_sidebar(); ?>
 </div>

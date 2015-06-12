@@ -7752,7 +7752,8 @@ SIDEBARS & ASIDES
   padding-top: 1em; }
 
 ul#sidebarLinks {
-  list-style-type: none; }
+  list-style-type: none;
+  text-align: center; }
 
 .widget ul {
   margin: 0; }
@@ -7915,6 +7916,13 @@ MEDIUM
   /*********************
   SIDEBARS & ASIDES
   *********************/
+  ul#sidebarLinks h3 {
+    font-size: 1.25em;
+    text-align: left; }
+
+  ul#sidebarLinks {
+    text-align: left; }
+
   .widget {
     padding: 0 10px;
     margin: 2.2em 0; }
@@ -8048,6 +8056,9 @@ you can add resource intensive styles.
   /*********************
   SIDEBARS & ASIDES
   *********************/
+  ul#sidebarLinks {
+    text-align: left; }
+
   .widget ul li {
     margin-bottom: 0.75em;
     /* deep nesting */ }
