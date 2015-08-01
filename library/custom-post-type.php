@@ -133,6 +133,45 @@ if(function_exists("register_field_group"))
 		),
 		'menu_order' => 0,
 	));
+    register_field_group(array (
+		'id' => 'acf_adding-pdfs',
+		'title' => 'Adding PDFs',
+		'fields' => array (
+			array (
+				'key' => 'field_55bcb69b02b5f',
+				'label' => 'Help',
+				'name' => '',
+				'type' => 'message',
+				'message' => '
+	<ol>
+	<li>Click on the \'Add Media\' button below, then click the \'Upload Files\' tab to give you the option to upload a new file from your computer</li>
+	<li>Click \'Select Files\' and navigate to the file you wish to upload</li>
+	<li>Once uploaded, the new file will be selected and an \'Attachment Details\' panel will be shown on the left-hand side of the screen. In this panel you can change the text that will link to the file by updating the \'Title\' field</li>
+	<li>Finally, click on \'Insert into post\' to add the file as a link in your content</li>
+	<li>To remove the file from the content, highlight the file link and hit \'Backspace\' or \'Delete\'</li>
+	<li>To change the text linking to the file, highlight the file link and click on the \'Insert/Edit Link\' icon, then change the \'Link Text\' in the diaglog box that appears and click the \'Update\' button</li>
+	</ol>',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'post',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'acf_after_title',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 1,
+	));
 }
 
 
@@ -140,13 +179,14 @@ if(function_exists("register_field_group"))
 {
 	register_field_group(array (
 		'id' => 'acf_add-attachment',
-		'title' => 'Add Attachment',
+		'title' => 'Upload your publication here to make it available for download',
 		'fields' => array (
 			array (
 				'key' => 'field_555bb05fc5b3b',
 				'label' => 'Document',
 				'name' => 'document',
 				'type' => 'file',
+                'instructions' => '',
 				'save_format' => 'url',
 				'library' => 'all',
 			),
@@ -163,7 +203,7 @@ if(function_exists("register_field_group"))
 			),
 		),
 		'options' => array (
-			'position' => 'side',
+			'position' => 'normal',
 			'layout' => 'default',
 			'hide_on_screen' => array (
 				0 => 'permalink',
@@ -175,6 +215,7 @@ if(function_exists("register_field_group"))
 				6 => 'author',
 				7 => 'format',
 				8 => 'send-trackbacks',
+                9 => 'featured_image',
 			),
 		),
 		'menu_order' => 0,
@@ -223,6 +264,14 @@ if(function_exists("register_field_group"))
 		'id' => 'acf_photos',
 		'title' => 'Photos',
 		'fields' => array (
+            array (
+				'key' => 'field_55716a00e15e8',
+				'label' => 'Images',
+				'name' => '',
+				'type' => 'message',
+				'message' => 'The images that you add below will be shown as a slider (<strong>to the right of the main text on individual article pages OR as the main sliding image on the home page</strong>). <br>
+	If you are posting an article, the first image will also show on the main news/research/workshop pages along with the article headline and some introductory text',
+			),
 			array (
 				'key' => 'field_557159b37a18c',
 				'label' => 'First Image',

@@ -22,11 +22,11 @@
 		</section> <!-- end article section -->
 		</div>
         <div class="large-12 medium-12 small-12 columns">
-        <?php if ( has_post_thumbnail() ) {
-        the_post_thumbnail('large');
-        } else { ?>
-        <img src="<?php echo get_template_directory_uri(); ?>/library/images/default.jpg" alt="<?php the_title(); ?>" />
-        <?php } ?>
+        <?php $firstImage = get_field('first_image');
+        if( !empty($firstImage) ): ?>
+        <img src="<?php echo $firstImage['url']; ?>"/>
+        <?php endif; ?>
+
         </div>
 	</article> <!-- end article -->
 
