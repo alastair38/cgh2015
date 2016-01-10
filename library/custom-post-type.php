@@ -133,6 +133,39 @@ if(function_exists("register_field_group"))
 		),
 		'menu_order' => 0,
 	));
+    	register_field_group(array (
+		'id' => 'acf_featured-posts',
+		'title' => 'Featured Posts',
+		'fields' => array (
+			array (
+				'key' => 'field_5692e5de7c0a8',
+				'label' => 'Show post on the home page',
+				'name' => '',
+				'type' => 'message',
+				'message' => 'To add this post to the bottom left hand corner of the home page, click on the \'Edit\' link to the right of \'Visibility: <strong>Public</strong>\' in the <strong>Publish</strong> box. Then check the box that says \'Stick this post to the front page\'.
+	
+	Only one post will show on the home page at any time, so if more than one post have this box checked, the most recent post will be shown.',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'post',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'acf_after_title',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
     register_field_group(array (
 		'id' => 'acf_adding-pdfs',
 		'title' => 'Adding PDFs',
