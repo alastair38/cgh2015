@@ -15,7 +15,7 @@ foreach($lastposts as $post) : setup_postdata($post); ?>
     ?>
 	<h4><a href="<?php the_permalink(); ?>"><?php echo $trimmed_title; ?></a></h4>
     <?php
-    $feat_image =  = get_field('first_image');
+    $feat_image = get_field('first_image');
 
 ?>
     <p style="background: url('<?php if ($feat_image) {
