@@ -11,7 +11,7 @@ require_once(get_template_directory().'/library/joints.php');
 
 define( 'ACF_LITE', false );
 
-include_once(get_template_directory().'/bower_components/acf/acf.php' );
+// include_once(get_template_directory().'/bower_components/acf/acf.php' );
 
 include_once(get_template_directory().'/bower_components/wpas/wpas.php' );
 
